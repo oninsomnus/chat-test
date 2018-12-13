@@ -1,0 +1,181 @@
+// Colors: 
+$primary: #DB3325;
+$secondary: #7d7ad6;
+
+$border: #dce1e6;
+$nightmode-border:#36374d;
+$nightmode-text3: #7a7a99;
+$nightmode-hover:#fd9652;
+
+// Text
+$text-light: #8A8F99;
+$nightmode-text-light:#666880;
+$nightmode-text-light2:#b8b8cc;
+$nightmode-text-light3:#7a7a99;
+$text-post: #717680;
+$text: #1D1F25;
+$nightmode-text:#e5e5e5;
+$nightmode-text2:#e6e6e6;
+$link: #00AEFF;
+
+// General
+$white: #FFFFFF;
+$white2:#f7f8fa;
+$black: #000000;
+$red: #f34761;
+$light-green:#d2f2c2;
+$green: #21b62b;
+$green2:#63b34d;
+$green3:#3d8033;
+$dark:#3e4559;
+$red2:#f24165;
+$red3:#ff0000;
+$dark2:#4c4c4c;
+$grey2:#cccccc;
+$blue2:#826cd3;
+
+//nightmode-theme
+$nightmode:#1b1c26;
+$nightmode-header:#2a2b3b;
+$nightmode-header-border:#36374d;
+$nightmode-input-icon:#818198;
+$nightmode-input-placeholder:#818198;
+$nightmode-header-icon:#828299;
+
+$nightmode-sidebar-name:#e5e5e5;
+$nightmode-sidebar-alias:#b8b8cc;
+
+$nightmode-post-border:#474766;
+// Login Form
+$login-border: #dce1e6;
+
+// button Form
+$btn-border: #dce1e6;
+
+// Post Form
+$post-border: #dce1e6;
+$post-content-text:#b8b8cc;
+
+// Header
+$header-background: #FFFFFF;
+$header-border: #d9e2e2;
+$header-search-border: #e1e2e6;
+
+// Sidebar
+$sidebar-menu-border: #e1e2e6;
+
+// Post Hashtags
+$hashtag-text: #00aeff;
+$hashtag-icon: #0798dc;
+$hashtag-icon-active: #FFFFFF;
+$hashtag-icon-background: #b2e7ff;
+$hashtag-icon-background-active: #0798dc;
+
+// Floating Chat
+$floating-chat-background: #FFFFFF;
+$floating-chat-border: #e1e2e6;
+$floating-chat-active-user-border: #f34761;
+$nightmode-chat-content:#2a2b3b;
+$nightmode-chat-message:#313245;
+$nightmode-chat-message-border:#474766;
+$nightmode-chat-input:#242533;
+$nightmode-chat-right:#242533;
+
+// Full Page Chat
+$chat-border: #e1e2e6;
+
+
+// Icons
+$icomoon-font-family: "bmyguide" !default;
+$icomoon-font-path: "fonts" !default;
+
+$icon-make-a-post-journal-close: "\e901";
+$icon-make-a-post-journal-location: "\e902";
+$icon-make-a-post-journal-divider: "\e903";
+$icon-make-a-post-journal-photo: "\e904";
+$icon-make-a-post-journal-photo-caption: "\e905";
+$icon-make-a-post-journal-group: "\e906";
+$icon-make-a-post-journal-options: "\e907";
+$icon-make-a-post-journal-text: "\e908";
+$icon-make-a-post-journal-video: "\e909";
+$icon-make-a-post-check: "\e90b";
+$icon-make-a-post-close: "\e90c";
+$icon-make-a-post-delete: "\e90d";
+$icon-make-a-post-location: "\e90e";
+$icon-make-a-post-edit: "\e90f";
+$icon-make-a-post-original-crop: "\e910";
+$icon-make-a-post-reset: "\e911";
+$icon-make-a-post-rotate: "\e912";
+$icon-make-a-post-square-crop: "\e913";
+$icon-notifications-back: "\e914";
+$icon-notifications-chat: "\e915";
+$icon-notifications-options: "\e916";
+$icon-notifications: "\e917";
+$icon-notifications-search: "\e918";
+$icon-notifications-settings: "\e919";
+$icon-profile-follow: "\e900";
+$icon-profile-chat: "\e91a";
+$icon-profile-chat-full: "\e91b";
+$icon-profile-comments: "\e91c";
+$icon-profile-like: "\e91e";
+$icon-profile-options: "\e91f";
+$icon-profile-notifications: "\e920";
+$icon-profile-search: "\e921";
+$icon-profile-view-map: "\e922";
+$icon-timeline-share: "\e954";
+$icon-timeline-chat: "\e923";
+$icon-timeline-comments: "\e924";
+$icon-timeline-like-filled: "\e925";
+$icon-timeline-like-outline: "\e947";
+$icon-timeline-like-full: "\e947";
+$icon-timeline-options: "\e926";
+$icon-timeline-notifications: "\e927";
+$icon-timeline-video-play: "\e928";
+$icon-timeline-search: "\e929";
+$icon-settings-account: "\e92a";
+$icon-settings-chat: "\e92b";
+$icon-settings-delete-account: "\e92c";
+$icon-settings-location: "\e92d";
+$icon-settings-logout: "\e92e";
+$icon-settings-notifications: "\e92f";
+$icon-settings-privacy: "\e930";
+$icon-settings-profile-cover-image: "\e931";
+$icon-settings-search: "\e932";
+$icon-settings-security: "\e933";
+$icon-settings-suspend-account: "\e934";
+$icon-login-check: "\e935";
+$icon-login-email: "\e936";
+$icon-login-name: "\e937";
+$icon-login-password: "\e938";
+$icon-chat-page-send: "\e90a";
+$icon-chat-page-add: "\e939";
+$icon-chat-page-attachement: "\e93a";
+$icon-chat-page-symbol: "\e93b";
+$icon-chat-page-check: "\e93c";
+$icon-chat-page-close: "\e93d";
+$icon-chat-page-delete: "\e93e";
+$icon-chat-page-emoji: "\e93f";
+$icon-chat-page-groups: "\e940";
+$icon-chat-page-image: "\e941";
+$icon-chat-page-options: "\e942";
+$icon-chat-page-notifications: "\e943";
+$icon-chat-page-people: "\e944";
+$icon-chat-page-search: "\e945";
+$icon-chat-page-seen: "\e946";
+$icon-chat-page-settings: "\e948";
+$icon-chat-page-back: "\e949";
+$icon-chat-full-send: "\e91d";
+$icon-chat-full-add: "\e94a";
+$icon-chat-full-attachement: "\e94b";
+$icon-chat-full-symbol: "\e94c";
+$icon-chat-full-close: "\e94d";
+$icon-chat-full-emoji: "\e94e";
+$icon-chat-full-groups: "\e94f";
+$icon-chat-full-options: "\e950";
+$icon-chat-full-people: "\e951";
+$icon-chat-full-search: "\e952";
+$icon-chat-full-seen: "\e953";
+$icon-chat-full-settings: "\e955";
+$icon-chat-full-back: "\e956";
+
+

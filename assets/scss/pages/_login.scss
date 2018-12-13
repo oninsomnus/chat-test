@@ -1,0 +1,293 @@
+.login-container {
+	height: 100vh;
+	width: 100vw;
+
+	.login-container-left, .login-container-right {
+		display: inline-block;
+		height: 100vh;
+		float: left;
+	}
+	.login-container-left {
+		padding: 130px 160px;
+		width: calc(720px - 320px);
+		height: calc(100vh - 260px);
+		background-color: white;
+		overflow: auto;
+
+		@media (max-width: 1170px) {
+			padding-left: 70px;
+			padding-right: 70px;
+		}
+
+		@media (max-height: 912px) {
+			padding-top: 60px;
+			padding-bottom: 60px;
+			height: calc(100vh - 120px);
+		}
+
+		@media (max-width: 960px) {
+			width: calc(100vw - 140px);
+		}
+		.login-header {
+			height: 35px;
+			display: table;
+			width: 100%;
+
+			.login-header-logo, .login-header-menu {
+				display: table-cell;
+				vertical-align: middle;
+			}
+			.login-header-logo {
+				height: 35px;
+				
+				a {
+					display: block;
+				}
+				img {
+					height: 35px;
+				}
+			}
+			.login-header-menu {
+				text-align: right;
+
+				ul {
+					list-style-type: none;
+				    padding: 0px;
+				    margin: 0px;
+
+					li {
+						display: inline-block;
+						margin-right: 50px;
+
+						.login-header-menu-link {
+							display: block;
+							font-size: 18px;
+							text-decoration: none;
+							color: $text-light;
+							cursor: context-menu;
+							@include transition(0.3s, ease);
+
+							&.active { 
+								color: $primary;
+							}
+							&:hover {
+								color: $primary;
+							}
+						}
+						a {
+							cursor: pointer!important;
+						}
+						&:last-child {
+							margin-right: 0px;
+						}
+					}
+				}
+			}
+		}
+		.login-content-wrapper {
+
+			.login-content {
+				margin-top: 130px;
+
+				.login-content-title {
+
+					span {	
+						font-size: 30px;
+						line-height: 30px;
+						font-weight: 300;
+						color: $text;
+					}
+				}
+				.login-content-subtitle {
+					margin-top: 10px;
+
+					span {	
+						font-size: 16px;
+						line-height: 16px;
+						color: $text-light;
+					}
+				}
+				.login-content-form {
+					margin-top: 50px;
+
+					.form-control {
+						position: relative;
+
+						.invalid-feedback {
+							font-size: 14px;
+							color:$red;
+						}
+						input[type="text"], input[type="email"], input[type="password"] {
+							width: 100%;
+							border: none;
+							border-bottom: 1px solid $login-border;
+							padding: 20px 0px;
+							color: $text;
+							outline: none;
+							@include transition(0.3s, ease);
+
+							&:focus {
+								border-bottom: 1px solid $primary;
+							}
+							&::placeholder {
+							    color: $text-light;
+							    opacity: 1;
+							}
+
+							&:-ms-input-placeholder {
+							   color: $text-light;
+							}
+
+							&::-ms-input-placeholder {
+							   color: $text-light;
+							}
+						}
+						input:focus + .input-icon {
+							color: $primary;
+						}
+						.input-icon {
+							position: absolute;
+							top: 0px;
+							bottom: 0px;
+							right: 0px;
+							height: 16px;
+							margin: auto;
+							color: $text-light;
+							width: 19px;
+							text-align: center;
+							font-size: 18px;
+							@include transition(0.3s, ease);
+
+							&.icon-email {
+								font-size: 13px;
+							}
+							&.icon-password-confirm {
+								font-size: 12px;
+							}
+						}
+						.form-btn {
+							margin-top: 65px;
+							outline: none;
+						}
+						.checkbox-container {
+							margin-top: 18px;
+						    display: block;
+						    position: relative;
+						    padding-left: 26px;
+						    margin-bottom: 12px;
+						    cursor: pointer;
+						    font-size: 14px;
+						    line-height: 19px;
+						    -webkit-user-select: none;
+						    -moz-user-select: none;
+						    -ms-user-select: none;
+						    user-select: none;
+						    float: left;
+						}
+						.checkbox-container input {
+						    position: absolute;
+						    opacity: 0;
+						    cursor: pointer;
+						}
+						.checkmark {
+						    position: absolute;
+						    top: 0;
+						    left: 0;
+						    height: 16px;
+						    width: 16px;
+							border-radius: 2px;
+							border: 1px solid $text-light;
+							@include transition(0.3s, ease);
+						}
+						.checkbox-container:hover input ~ .checkmark {
+							border: 1px solid $primary;
+						}
+						.checkbox-container input:checked ~ .checkmark {
+						    background-color: $primary;
+							border: 1px solid $primary;
+						}
+						.checkmark:after {
+						    content: "";
+						    position: absolute;
+						    display: none;
+						}
+						.checkbox-container input:checked ~ .checkmark:after {
+						    display: block;
+						}
+						.checkbox-container .checkmark:after {
+						    left: 6px;
+						    top: 2px;
+						    width: 3px;
+						    height: 7px;
+						    border: solid white;
+						    border-width: 0 2px 2px 0;
+						    -webkit-transform: rotate(45deg);
+						    -ms-transform: rotate(45deg);
+						    transform: rotate(45deg);
+						}
+						.login-form-forgot-password {
+							float: right;
+							font-size: 14px;
+							line-height: 14px;
+							color: $link;
+							margin-top: 20px;
+						}
+					}
+				}
+			}
+		}
+	}
+	.login-container-right {
+		position: relative;
+		width: calc(100vw - 720px);
+		pointer-events: none;
+
+		@media (max-width: 1170px) {
+			width: calc(100vw - 540px);
+		}
+
+		@media (max-width: 960px) {
+			display: none;
+		}
+		.photo-slider {
+			height: 100vh;
+
+			.slick-list {
+				height: 100%;
+
+				.slick-track {
+					height: 100%;
+
+					.slick-slide {
+						background-size: cover;
+						background-position: center;
+						outline: none;
+						position: relative;
+
+						.photo-owner {
+							display: none;
+							position: absolute;
+							bottom: 40px;
+							right: 0px;
+							display: none;
+							font-size: 18px;
+							line-height: 18px;
+							color: $white;
+							font-weight: 300;
+							padding: 10px 20px;
+							padding-right: 50px;
+							border-top-left-radius: 50px;
+							border-bottom-left-radius: 50px;
+							cursor: context-menu;
+							background: rgb(47,228,235);
+							background: -moz-linear-gradient(330deg, rgba(47,228,235,1) 0%, rgba(132,105,210,1) 43%, rgba(132,105,210,1) 100%);
+							background: -webkit-linear-gradient(330deg, rgba(47,228,235,1) 0%, rgba(132,105,210,1) 43%, rgba(132,105,210,1) 100%);
+							background: linear-gradient(330deg, rgba(47,228,235,1) 0%, rgba(132,105,210,1) 43%, rgba(132,105,210,1) 100%);
+							filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#2fe4eb",endColorstr="#8469d2",GradientType=1);
+						}
+					}
+					}
+				}
+			}
+		}
+}

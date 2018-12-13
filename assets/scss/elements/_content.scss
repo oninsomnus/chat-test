@@ -1,0 +1,22 @@
+#content {
+	
+	.content {
+		position: relative;
+		max-width: 1100px;
+		margin: 0px auto;
+		height: 100%;
+		display: flex;
+    	justify-content: space-between;
+
+		.sidebar, .middle-content {
+			display: inline-block;
+			float: left;
+			padding: 20px 0px;
+			height: 100%;
+		}
+		.middle-content {
+			width: 600px;
+			margin: 0px 25px;
+		}
+	}
+}

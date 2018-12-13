@@ -1,0 +1,559 @@
+.lightbox {
+	display: none;
+	position: fixed;
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	z-index: 100000;
+	background-color: rgba(0,0,0,0.7);
+	cursor: context-menu;
+
+	.lightbox-container {
+		position: absolute;
+		top: 0px;
+		bottom: 0px;
+		left: 0px;
+		right: 0px;
+		margin: auto;
+		background-color: $white;
+		border-radius: 10px;
+		width: 440px;
+		height: 400px;
+		overflow: hidden;
+		-webkit-box-shadow: 0px 10px 30px 0px rgba(0,0,0,0.15);
+		-moz-box-shadow: 0px 10px 30px 0px rgba(0,0,0,0.15);
+		box-shadow: 0px 10px 30px 0px rgba(0,0,0,0.15);
+
+		.lightbox-header {
+			position: relative;
+			border-bottom: 1px solid $border;
+			padding: 20px;
+
+			.lightbox-header-title {
+				font-size: 18px;
+				line-height: 18px;
+				font-weight: 500;
+				color: $text;
+			}
+			.lightbox-header-close {
+				position: absolute;
+				top: 0px;
+				bottom: 0px;
+				right: 22px;
+				margin: auto;
+				height: 12px;
+				color: $text;
+				cursor: pointer;
+
+				i {
+					font-size: 12px;
+					line-height: 12px;
+					display: block;
+				}
+			}
+		}
+		.lightbox-content {
+			padding: 20px;
+			overflow: auto;
+
+			.form-control {
+				margin-bottom: 15px;
+
+				&:last-child {
+					margin-bottom: 0px;
+				}
+				input, textarea, select {
+					margin-top: 5px;
+					display: block;
+					width: 100%;
+					padding: 15px;
+					border: 1px solid $border;
+					border-radius: 4px;
+					outline: none;
+				}
+				input, textarea {
+					width: calc(100% - 30px);
+				}
+				textarea {
+					resize: none;
+					height: 42px;
+				}
+				label {
+					font-size: 16px;
+					line-height: 16px;
+					font-weight: 500;
+					color: $text;
+
+					span {
+						font-size: 14px;
+						color: $text-light;
+					}
+				}
+				.switch {
+					float: right;
+					position: relative;
+					display: inline-block;
+					width: 40px;
+					height: 20px;
+				}
+				.switch input {display:none;}
+				.slider {
+					position: absolute;
+					cursor: pointer;
+					top: 0;
+					left: 0;
+					right: 0;
+					bottom: 0;
+					background-color:$grey2;
+					-webkit-transition: .2s;
+					transition: .2s;
+				}
+				.slider:before {
+					position: absolute;
+					content: "";
+					height: 14px;
+					width: 14px;
+					left: 3px;
+					bottom: 3px;
+					background-color:$white;
+					-webkit-transition: .2s;
+					transition: .2s;
+				}
+				input:checked + .slider {
+					background-color:$secondary;
+				}
+				input:focus + .slider {
+					box-shadow: 0 0 1px $secondary;
+				}
+				input:checked + .slider:before {
+					-webkit-transform: translateX(20px);
+					-ms-transform: translateX(20px);
+					transform: translateX(20px);
+				}
+				.slider.round {
+					border-radius: 34px;
+				}
+				.slider.round:before {
+					border-radius: 50%;
+				}
+			}
+		}
+		.lightbox-footer {
+			position: relative;
+			border-top: 1px solid $border;
+			padding: 20px;
+			height: 40px;
+
+			.btn {
+				display: inline-block;
+				float: right;
+			}
+		}
+	}
+	&-report {
+
+		.lightbox-container {
+
+			.lightbox-content {
+				height: calc(260px - 40px);
+			}
+		}
+	}
+	&-group-members {
+
+		.lightbox-container {
+			height: calc(640px - 40px);
+
+			.lightbox-content {
+
+				&-members {
+					height: calc(535px - 40px);
+					&::-webkit-scrollbar {
+					    width: 14px;
+					    height: 18px;
+					}
+					&::-webkit-scrollbar-thumb {
+					    height: 6px;
+					    border: 5px solid rgba(0, 0, 0, 0);
+					    background-clip: padding-box;
+					    -webkit-border-radius: 7px;
+					    background-color:$red2;
+					    -webkit-box-shadow: inset -1px -1px 0px rgba(0, 0, 0, 0.05), inset 1px 1px 0px rgba(0, 0, 0, 0.05);
+					}
+					&::-webkit-scrollbar-button {
+					    width: 0;
+					    height: 0;
+					    display: none;
+					}
+					&::-webkit-scrollbar-corner {
+					    background-color: transparent;
+					}
+
+					.members-list {
+						list-style-type: none;
+						padding: 0px;
+						margin: 0px;
+						width: 100%;
+						display: inline-block;
+
+						.dropdown-member-settings {
+							text-align: left;
+							width: 160px;
+							top: 45px;
+
+							ul {
+
+								li {
+									margin-bottom: 0px;
+
+									a {
+										margin-bottom: 0px;
+									}
+								}
+							}
+						}
+						li {
+							display: table;
+							width: 100%;
+							margin-bottom: 20px;
+
+							&.member-admin {
+
+								.member-name {
+
+									&:after {
+										position: absolute;
+										top: 0px;
+										bottom: 0px;
+										right: 0px;
+										height: 13px;
+										margin: auto;
+										padding: 0px 6px;
+										padding-top: 3px;
+										border-radius: 8px;
+										content: 'ADMIN';
+										font-size: 10px;
+										line-height: 10px;
+										color: $white;
+										background: rgb(255,255,255);
+										background: -moz-linear-gradient(330deg, rgba(250,143,50,1) 0%, rgba(242,61,103,1) 100%);
+										background: -webkit-linear-gradient(330deg, rgba(250,143,50,1) 0%, rgba(242,61,103,1) 100%);
+										background: linear-gradient(330deg, rgba(250,143,50,1) 0%, rgba(242,61,103,1) 100%);
+										filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#fa8f32",endColorstr="#f23d67",GradientType=1);
+									}
+								}
+							}
+							&.member-moderator {
+
+								.member-name {
+
+									&:after {
+										position: absolute;
+										top: 0px;
+										bottom: 0px;
+										right: 0px;
+										height: 13px;
+										margin: auto;
+										padding: 0px 6px;
+										padding-top: 3px;
+										border-radius: 8px;
+										content: 'MODERATOR';
+										font-size: 10px;
+										line-height: 10px;
+										color: $white;
+										background: rgb(47,228,235);
+										background: -moz-linear-gradient(330deg, rgba(47,228,235,1) 0%, rgba(132,105,210,1) 100%);
+										background: -webkit-linear-gradient(330deg, rgba(47,228,235,1) 0%, rgba(132,105,210,1) 100%);
+										background: linear-gradient(330deg, rgba(47,228,235,1) 0%, rgba(132,105,210,1) 100%);
+										filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#2fe4eb",endColorstr="#8469d2",GradientType=1);
+									}
+								}
+							}
+							&:last-child {
+								margin-bottom: 0px;
+							}
+							.member-image, .member-name, .member-actions {
+								display: table-cell;
+								vertical-align: middle;
+							}
+							.member-image {
+								height: 60px;
+								width: 60px;
+								background-size: cover;
+								background-position: center;
+								border-radius: 4px;
+							}
+							.member-name {
+								position: relative;
+
+								span {
+									font-weight: 500;
+								    width: 164px;
+								    display: block;
+								    padding: 0px 20px;
+									text-overflow: ellipsis;
+									overflow: hidden; 
+									white-space: nowrap;
+									@include transition(0.3s, ease);
+								}
+							}
+							.member-actions {
+								position: relative;
+								opacity: 0;
+								// opacity: 1;
+								text-align: right;
+								@include transition(0.3s, ease);
+
+								.member-action-settings {
+									cursor: pointer;
+
+									i {
+										color: $text-light;
+										font-size: 24px;
+										line-height: 24px;
+									}
+								}
+								&.active {
+									opacity: 1;
+								}
+							}
+							&:hover {
+
+								.member-name {
+
+									span {
+										color: $primary;
+									}
+								}
+								.member-actions {
+									opacity: 1;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	&-create-group {
+
+		.lightbox-container {
+			height: 640px;
+
+			.lightbox-content {
+
+				&-list {
+					height: calc(340px - 40px);
+				}
+			}
+		}
+	}
+	&-add-members {
+
+		.lightbox-container {
+			height: 620px;
+
+			.lightbox-content {
+
+				&-list {
+					height: calc(490px - 40px);
+				}
+			}
+		}
+	}
+	&-create-group, &-add-members {
+
+		.lightbox-container {
+
+			.lightbox-content {
+				// overflow: hidden;
+
+				&-create-group {
+					background-color: $white2;
+					height: calc(100px - 40px);
+					border-bottom: 1px solid $border;
+
+					.create-group-image, .create-group-title {
+						display: inline-block;
+						float: left;
+					}
+					.create-group-image {
+						width: 60px;
+						height: 60px;
+						background-size: cover;
+						background-position: center;
+						cursor: pointer;
+					}
+					.create-group-title {
+						width: 320px;
+						margin-top: 10px;
+						margin-left: 20px;
+						height: 45px;
+						background-image: linear-gradient(to right, #b8becc 64%, rgba(255,255,255,0) 0%);
+						background-position: bottom;
+						background-size: 19px 2px;
+						background-repeat: repeat-x;
+
+						input {
+							width: 100%;
+							font-size: 16px;
+							line-height: 16px;
+							border: none;
+							background-color: #f7f8fa;
+							padding: 12px 0px;
+							outline: none;
+							color: #666e80;
+						}
+					}
+				}
+				&-search {
+					height: calc(62px - 40px);
+					border-bottom: 1px solid $border;
+
+					input {
+						width: calc(100% - 36px);
+						border: none;
+						padding: 3px 0px;
+						padding-left: 36px;
+						color: $text;
+						outline: none;
+					}
+					i {
+						position: absolute;
+						display: block;
+						color:$text-light;
+						font-size: 21px;
+						line-height: 21px;
+					}
+				}
+				&-list {
+
+					&::-webkit-scrollbar {
+					    width: 14px;
+					    height: 18px;
+					}
+					&::-webkit-scrollbar-thumb {
+					    height: 6px;
+					    border: 5px solid rgba(0, 0, 0, 0);
+					    background-clip: padding-box;
+					    -webkit-border-radius: 7px;
+					    background-color:$red2;
+					    -webkit-box-shadow: inset -1px -1px 0px rgba(0, 0, 0, 0.05), inset 1px 1px 0px rgba(0, 0, 0, 0.05);
+					}
+					&::-webkit-scrollbar-button {
+					    width: 0;
+					    height: 0;
+					    display: none;
+					}
+					&::-webkit-scrollbar-corner {
+					    background-color: transparent;
+					}
+					.create-group-list, .add-members-list {
+						list-style-type: none;
+						margin: 0px;
+						padding: 0px;
+						width: 100%;
+						display: inline-block;
+
+						li {
+							display: table;
+							width: 100%;
+							margin-bottom: 20px;
+
+							&:last-child {
+								margin-bottom: 0px;
+							}
+							.create-group-list-image, .create-group-list-name, .create-group-list-actions, .add-members-list-image, .add-members-list-name, .add-members-list-actions {
+								display: table-cell;
+								vertical-align: middle;
+							}
+							.create-group-list-image, .add-members-list-image {
+								height: 60px;
+								width: 60px;
+								background-size: cover;
+								background-position: center;
+								border-radius: 4px;
+							}
+							.create-group-list-name, .add-members-list-name {
+
+								span {
+								    width: 164px;
+								    display: block;
+								    padding: 0px 20px;
+									text-overflow: ellipsis;
+									overflow: hidden; 
+									white-space: nowrap;
+								}
+							}
+							.create-group-list-actions, .add-members-list-actions {
+								text-align: right;
+
+								.create-group-list-action, .add-members-list-action {
+
+									.create-group-list-action-add, .create-group-list-action-added, .add-members-list-action-add, .add-members-list-action-added {
+										display: block;
+										float: right;
+										padding: 8px 14px;
+										border-radius: 4px;
+
+										span {
+											padding-left: 6px;
+											font-size: 14px;
+											line-height: 14px;
+											font-weight: 500;
+										}
+									}
+									.create-group-list-action-add, .add-members-list-action-add {
+										background-color:$green2;
+										color: $white;
+										cursor: pointer;
+
+										i {
+											font-size: 13px;
+											line-height: 13px;
+										}
+									}
+									.create-group-list-action-added, .add-members-list-action-added {
+										background-color:$light-green;
+										color:$green3;
+										display: none;
+
+										i {
+											font-size: 10px;
+											line-height: 10px;
+										}
+									}
+									.create-group-list-action-remove, .add-members-list-action-remove {
+										float: right;
+										display: none;
+										padding: 9px 0px;
+										padding-left: 15px;
+										cursor: pointer;
+
+										i {
+											font-size: 16px;
+											line-height: 16px;
+										}
+									}
+									&.active {
+
+										.create-group-list-action-add, .add-members-list-action-add {
+											display: none;
+										}
+										.create-group-list-action-added, .add-members-list-action-added {
+											display: block;
+										}
+										.create-group-list-action-remove, .add-members-list-action-remove {
+											display: block;
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,276 @@
+#header {
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	background-color: $header-background;
+	border-bottom: 1px solid $header-border;
+	z-index: 99999;
+
+	.header {
+		min-width: 1020px;
+		margin: 0px auto;
+		height: 60px;
+		padding: 0px 40px;
+
+		.logo {
+			float: left;
+			display: inline-block;
+			margin: 19px 0px;
+			height: 23px;
+			
+			img {
+				height: 100%;
+			}
+                        .logo-nightmode{
+                            display:none;
+                        }
+		}
+		.search {
+			float: left;
+			display: inline-block;
+			position: relative;
+
+			input {
+				border: 1px solid $header-search-border;
+				font-size: 14px;
+				line-height: 14px;
+				outline: none;
+				padding: 11px;
+				padding-left: 40px;
+				border-radius: 50px;
+				margin: 10px 20px;
+				color: $text;
+				width: 360px;
+				@include transition(0.3s, ease);
+
+				&:focus {
+					border: 1px solid $primary;
+				}
+				&::placeholder {
+				    color: $text-light;
+				    opacity: 1;
+				}
+				&:-ms-input-placeholder {
+				   	color: $text-light;
+				}
+
+				&::-ms-input-placeholder {
+				   	color: $text-light;
+				}
+			}
+			.input-icon {
+				position: absolute;
+				left: 33px;
+				top: 0px;
+				bottom: 0px;
+				height: 16px;
+				margin: auto;
+				color: $primary;
+				@include transition(0.3s, ease);
+			}
+		}
+		.header-right {
+			display: inline-block;
+			float: right;
+			height: 100%;
+
+			.header-messages, .header-notifications, .header-profile, .header-login, .header-sign-up {
+				float: left;
+				display: inline-block;
+			}
+			.header-login, .header-sign-up {
+				margin: 11px 0px;
+				margin-left: 30px;
+
+				a {
+					display: block;
+					text-decoration: none;
+				}
+			}
+			.header-messages, .header-notifications {
+				position: relative;
+
+				.header-messages-toggle, .header-notifications-toggle {
+					position: relative;
+					margin: 18px 0px;
+					margin-left: 30px;
+					color: $text-light;
+					height: 24px;
+					cursor: pointer;
+					@include transition(0.3s, ease);
+
+					i {
+						font-size: 24px;
+					}
+					&:hover {
+						color: $primary;
+					}
+					&.active {
+
+						&:before {
+							position: absolute;
+							top: -2px;
+							right: -2px;
+							border: 2px solid $white;
+							border-radius: 100%;
+							content: '';
+							height: 10px;
+							width: 10px;
+							background-color: $red;
+							pointer-events: none;
+						}
+					}
+				}
+				.header-notifications-content {
+					margin-bottom: 20px;
+
+					.header-notification {
+						position: relative;
+						margin-bottom: 18px;
+						display: block;
+						cursor: pointer;
+
+						.notification-image, .notification-content, .notification-time {
+							display: inline-block;
+							float: left;
+						}
+						.notification-image {
+							width: 40px;
+							height: 40px;
+							border-radius: 5px;
+							background-size: cover;
+							background-position: center;
+						}
+						.notification-content {
+							width: calc(100% - 120px);
+							padding-left: 10px;
+							font-size: 14px;
+							line-height: 22px;
+							color: $text-light;
+
+							a {
+								color: $text;
+								text-decoration: none;
+							}
+						}
+						.notification-time {
+							text-align: right;
+							width: 70px;
+							font-size: 14px;
+							line-height: 22px;
+							color: $text-light;
+						}
+						&:last-child {
+							margin-bottom: 0px;
+						}
+					}
+				}
+				.header-notifications-footer, .header-messages-footer {
+					border-top: 1px solid $border;
+					padding-top: 20px;
+				}
+				.header-messages-content {
+					margin-bottom: 20px;
+
+					.header-message {
+						position: relative;
+						margin-bottom: 18px;
+						display: block;
+						cursor: pointer;
+
+						.message-image, .message-content, .message-time {
+							display: inline-block;
+							float: left;
+						}
+						.message-image {
+							width: 40px;
+							height: 40px;
+							border-radius: 5px;
+							background-size: cover;
+							background-position: center;
+						}
+						.message-content {
+							width: calc(100% - 120px);
+							padding-left: 10px;
+							
+							.message-sender {
+								font-size: 14px;
+								font-weight: 500;
+								color: $text-light;
+								@include transition(0.3s, ease);
+							}
+							.message-details {
+								font-size: 14px;
+								color: $text-light;
+								@include transition(0.3s, ease);
+							}
+						}
+						.message-time {
+							text-align: right;
+							width: 70px;
+							font-size: 14px;
+							line-height: 22px;
+							color: $text-light;
+						}
+						&:last-child {
+							margin-bottom: 0px;
+						}
+						&:hover {
+
+							.message-content {
+
+								.message-sender, .message-details {
+									color: $text;
+								}
+							}
+						}
+					}
+				}
+				.header-notifications-footer {
+					border-top: 1px solid $border;
+					padding-top: 20px;
+				}
+			}
+			.header-profile {
+				position: relative;
+				margin-left: 30px;
+				
+				.header-profile-toggle {
+					margin: 10px 0px;
+					cursor: pointer;
+					height: 40px;
+
+					.header-profile-toggle-picture, .header-profile-toggle-arrow {
+						display: inline-block;
+						float: left;
+					}
+					.header-profile-toggle-picture {
+						height: 40px;
+						width: 40px;
+						border-radius: 5px;
+						background-size: cover;
+						background-position: center;
+						@include transition(0.3s, ease);
+					}
+					&:hover {
+
+						.header-profile-toggle-picture {
+							opacity: 0.9;
+						}
+					}
+					.header-profile-toggle-arrow {
+						margin: 10px 0px;
+						margin-left: 6px;
+
+						i {
+							font-size: 14px;
+							line-height: 14px;
+							color: $text-light;
+						}
+					}
+				}
+			}
+		}
+	}
+}

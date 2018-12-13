@@ -1,0 +1,470 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700');
+
+@font-face {
+    font-family: 'bmyguide';
+    src:  url('../fonts/bmyguide.eot?3i894m');
+    src:  url('../fonts/bmyguide.eot?3i894m#iefix') format('embedded-opentype'),
+        url('../fonts/bmyguide.ttf?3i894m') format('truetype'),
+        url('../fonts/bmyguide.woff?3i894m') format('woff'),
+        url('../fonts/bmyguide.svg?3i894m#bmyguide') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: '#{$icomoon-font-family}' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-chat_muted:before {
+  content: "\1f317";
+}
+.icon-volume-mute2:before {
+  content: "\ea2a";
+}
+.icon-make-a-post-journal-close {
+  &:before {
+    content: $icon-make-a-post-journal-close; 
+  }
+}
+.icon-make-a-post-journal-location {
+  &:before {
+    content: $icon-make-a-post-journal-location; 
+  }
+}
+.icon-make-a-post-journal-divider {
+  &:before {
+    content: $icon-make-a-post-journal-divider; 
+  }
+}
+.icon-make-a-post-journal-photo {
+  &:before {
+    content: $icon-make-a-post-journal-photo; 
+  }
+}
+.icon-make-a-post-journal-photo-caption {
+  &:before {
+    content: $icon-make-a-post-journal-photo-caption; 
+  }
+}
+.icon-make-a-post-journal-group {
+  &:before {
+    content: $icon-make-a-post-journal-group; 
+  }
+}
+.icon-make-a-post-journal-options {
+  &:before {
+    content: $icon-make-a-post-journal-options; 
+  }
+}
+.icon-make-a-post-journal-text {
+  &:before {
+    content: $icon-make-a-post-journal-text; 
+  }
+}
+.icon-make-a-post-journal-video {
+  &:before {
+    content: $icon-make-a-post-journal-video; 
+  }
+}
+.icon-make-a-post-check {
+  &:before {
+    content: $icon-make-a-post-check; 
+  }
+}
+.icon-make-a-post-close {
+  &:before {
+    content: $icon-make-a-post-close; 
+  }
+}
+.icon-make-a-post-delete {
+  &:before {
+    content: $icon-make-a-post-delete; 
+  }
+}
+.icon-make-a-post-location {
+  &:before {
+    content: $icon-make-a-post-location; 
+  }
+}
+.icon-make-a-post-edit {
+  &:before {
+    content: $icon-make-a-post-edit; 
+  }
+}
+.icon-make-a-post-original-crop {
+  &:before {
+    content: $icon-make-a-post-original-crop; 
+  }
+}
+.icon-make-a-post-reset {
+  &:before {
+    content: $icon-make-a-post-reset; 
+  }
+}
+.icon-make-a-post-rotate {
+  &:before {
+    content: $icon-make-a-post-rotate; 
+  }
+}
+.icon-make-a-post-square-crop {
+  &:before {
+    content: $icon-make-a-post-square-crop; 
+  }
+}
+.icon-notifications-back {
+  &:before {
+    content: $icon-notifications-back; 
+  }
+}
+.icon-notifications-chat {
+  &:before {
+    content: $icon-notifications-chat;     
+  }
+}
+.icon-notifications-options {
+  &:before {
+    content: $icon-notifications-options; 
+  }
+}
+.icon-notifications {
+  &:before {
+    content: $icon-notifications; 
+  }
+}
+.icon-notifications-search {
+  &:before {
+    content: $icon-notifications-search; 
+  }
+}
+.icon-notifications-settings {
+  &:before {
+    content: $icon-notifications-settings; 
+  }
+}
+.icon-profile-follow {
+  &:before {
+    content: $icon-profile-follow; 
+  }
+}
+.icon-profile-chat {
+  &:before {
+    content: $icon-profile-chat;     
+  }
+}
+.icon-profile-chat-full {
+  &:before {
+    content: $icon-profile-chat-full; 
+  }
+}
+.icon-profile-comments {
+  &:before {
+    content: $icon-profile-comments; 
+  }
+}
+.icon-profile-like {
+  &:before {
+    content: $icon-profile-like;     
+  }
+}
+.icon-profile-options {
+  &:before {
+    content: $icon-profile-options; 
+  }
+}
+.icon-profile-notifications {
+  &:before {
+    content: $icon-profile-notifications; 
+  }
+}
+.icon-profile-search {
+  &:before {
+    content: $icon-profile-search; 
+  }
+}
+.icon-profile-view-map {
+  &:before {
+    content: $icon-profile-view-map; 
+  }
+}
+.icon-timeline-share {
+  &:before {
+    content: $icon-timeline-share; 
+  }
+}
+.icon-timeline-chat {
+  &:before {
+    content: $icon-timeline-chat;     
+  }
+}
+.icon-timeline-comments {
+  &:before {
+    content: $icon-timeline-comments; 
+  }
+}
+.icon-timeline-like-filled {
+  &:before {
+    content: $icon-timeline-like-filled; 
+  }
+}
+.icon-timeline-like-outline {
+  &:before {
+    content: $icon-timeline-like-outline; 
+  }
+}
+.icon-timeline-options {
+  &:before {
+    content: $icon-timeline-options; 
+  }
+}
+.icon-timeline-notifications {
+  &:before {
+    content: $icon-timeline-notifications; 
+  }
+}
+.icon-timeline-video-play {
+  &:before {
+    content: $icon-timeline-video-play; 
+  }
+}
+.icon-timeline-search {
+  &:before {
+    content: $icon-timeline-search; 
+  }
+}
+.icon-settings-account {
+  &:before {
+    content: $icon-settings-account; 
+  }
+}
+.icon-settings-chat {
+  &:before {
+    content: $icon-settings-chat;     
+  }
+}
+.icon-settings-delete-account {
+  &:before {
+    content: $icon-settings-delete-account; 
+  }
+}
+.icon-settings-location {
+  &:before {
+    content: $icon-settings-location; 
+  }
+}
+.icon-settings-logout {
+  &:before {
+    content: $icon-settings-logout; 
+  }
+}
+.icon-settings-notifications {
+  &:before {
+    content: $icon-settings-notifications; 
+  }
+}
+.icon-settings-privacy {
+  &:before {
+    content: $icon-settings-privacy; 
+  }
+}
+.icon-settings-profile-cover-image {
+  &:before {
+    content: $icon-settings-profile-cover-image; 
+  }
+}
+.icon-settings-search {
+  &:before {
+    content: $icon-settings-search; 
+  }
+}
+.icon-settings-security {
+  &:before {
+    content: $icon-settings-security; 
+  }
+}
+.icon-settings-suspend-account {
+  &:before {
+    content: $icon-settings-suspend-account; 
+  }
+}
+.icon-login-check {
+  &:before {
+    content: $icon-login-check; 
+  }
+}
+.icon-login-email {
+  &:before {
+    content: $icon-login-email; 
+  }
+}
+.icon-login-name {
+  &:before {
+    content: $icon-login-name; 
+  }
+}
+.icon-login-password {
+  &:before {
+    content: $icon-login-password; 
+  }
+}
+.icon-chat-page-send {
+  &:before {
+    content: $icon-chat-page-send; 
+  }
+}
+.icon-chat-page-add {
+  &:before {
+    content: $icon-chat-page-add; 
+  }
+}
+.icon-chat-page-attachement {
+  &:before {
+    content: $icon-chat-page-attachement; 
+  }
+}
+.icon-chat-page-symbol {
+  &:before {
+    content: $icon-chat-page-symbol;     
+  }
+}
+.icon-chat-page-check {
+  &:before {
+    content: $icon-chat-page-check; 
+  }
+}
+.icon-chat-page-close {
+  &:before {
+    content: $icon-chat-page-close; 
+  }
+}
+.icon-chat-page-delete {
+  &:before {
+    content: $icon-chat-page-delete; 
+  }
+}
+.icon-chat-page-emoji {
+  &:before {
+    content: $icon-chat-page-emoji; 
+  }
+}
+.icon-chat-page-groups {
+  &:before {
+    content: $icon-chat-page-groups; 
+  }
+}
+.icon-chat-page-image {
+  &:before {
+    content: $icon-chat-page-image; 
+  }
+}
+.icon-chat-page-options {
+  &:before {
+    content: $icon-chat-page-options; 
+  }
+}
+.icon-chat-page-notifications {
+  &:before {
+    content: $icon-chat-page-notifications; 
+  }
+}
+.icon-chat-page-people {
+  &:before {
+    content: $icon-chat-page-people; 
+  }
+}
+.icon-chat-page-search {
+  &:before {
+    content: $icon-chat-page-search; 
+  }
+}
+.icon-chat-page-seen {
+  &:before {
+    content: $icon-chat-page-seen; 
+  }
+}
+.icon-chat-page-settings {
+  &:before {
+    content: $icon-chat-page-settings; 
+  }
+}
+.icon-chat-page-back {
+  &:before {
+    content: $icon-chat-page-back; 
+  }
+}
+.icon-chat-full-send {
+  &:before {
+    content: $icon-chat-full-send; 
+  }
+}
+.icon-chat-full-add {
+  &:before {
+    content: $icon-chat-full-add; 
+  }
+}
+.icon-chat-full-attachement {
+  &:before {
+    content: $icon-chat-full-attachement; 
+  }
+}
+.icon-chat-full-symbol {
+  &:before {
+    content: $icon-chat-full-symbol; 
+  }
+}
+.icon-chat-full-close {
+  &:before {
+    content: $icon-chat-full-close; 
+  }
+}
+.icon-chat-full-emoji {
+  &:before {
+    content: $icon-chat-full-emoji; 
+  }
+}
+.icon-chat-full-groups {
+  &:before {
+    content: $icon-chat-full-groups; 
+  }
+}
+.icon-chat-full-options {
+  &:before {
+    content: $icon-chat-full-options; 
+  }
+}
+.icon-chat-full-people {
+  &:before {
+    content: $icon-chat-full-people; 
+  }
+}
+.icon-chat-full-search {
+  &:before {
+    content: $icon-chat-full-search; 
+  }
+}
+.icon-chat-full-seen {
+  &:before {
+    content: $icon-chat-full-seen; 
+  }
+}
+.icon-chat-full-settings {
+  &:before {
+    content: $icon-chat-full-settings; 
+  }
+}
+.icon-chat-full-back {
+  &:before {
+    content: $icon-chat-full-back; 
+  }
+}
+

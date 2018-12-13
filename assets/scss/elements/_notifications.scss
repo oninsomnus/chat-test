@@ -1,0 +1,103 @@
+.toasts {
+	position: fixed;
+	bottom: 30px;
+	left: 30px;
+	width: calc(420px - 40px);
+
+	.toast {
+		position: relative;
+		background-color: $white;
+                z-index: 9999;
+		-webkit-box-shadow: inset 0px 0px 0px 1px $border, 0px 3px 10px 0px rgba(0, 0, 0, 0.1);
+		-moz-box-shadow: inset 0px 0px 0px 1px $border, 0px 3px 10px 0px rgba(0, 0, 0, 0.1);
+		box-shadow: inset 0px 0px 0px 1px $border, 0px 3px 10px 0px rgba(0, 0, 0, 0.1);
+		padding: 18px 20px;
+	    padding-right: 50px;
+	    width: calc(100% - 30px);
+		border-radius: 4px;
+		margin-top: 20px;
+		cursor: context-menu;
+		display: table;
+		opacity: 0;
+		pointer-events: none;
+		@include transition(0.3s, ease);
+
+		.toast-icon, .toast-content {
+			display: table-cell;
+		}
+		.toast-icon {
+			vertical-align: top;
+			width: 40px;
+
+			.toast-icon-content {
+				height: 40px;
+				width: 40px;
+				background-size: cover;
+				background-position: center;
+				border-radius: 4px;
+			}
+		}
+		.toast-content {
+			vertical-align: middle;
+			padding-left: 20px;
+			width: calc(100% - 90px);
+
+			.toast-content-text {
+				color: $text;
+				font-size: 16px;
+				font-weight: 500;
+			}
+			.toast-content-time {
+				color: $text-light;
+				font-size: 14px;
+				line-height: 14px;
+				margin-top: 6px;
+			}
+		}
+		.toast-close {
+			position: absolute;
+			top: 18px;
+			right: 20px;
+			cursor: pointer;
+			color: $text;
+
+			i {
+				font-size: 14px;
+				line-height: 14px;
+			}
+		}
+		&-important {
+			background: rgb(250,143,50);
+			background: -moz-linear-gradient(330deg, rgba(250,143,50,1) 0%, rgba(242,61,103,1) 100%);
+			background: -webkit-linear-gradient(330deg, rgba(250,143,50,1) 0%, rgba(242,61,103,1) 100%);
+			background: linear-gradient(330deg, rgba(250,143,50,1) 0%, rgba(242,61,103,1) 100%);
+			filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#fa8f32",endColorstr="#f23d67",GradientType=1);
+			-webkit-box-shadow: inset 0px 0px 0px 0px $border, 0px 10px 20px 0px rgba(242,61,103,0.5);
+			-moz-box-shadow: inset 0px 0px 0px 0px $border, 0px 10px 20px 0px rgba(242,61,103,0.5);
+			box-shadow: inset 0px 0px 0px 0px $border, 0px 10px 20px 0px rgba(242,61,103,0.5);
+
+			.toast-close {
+				color: $white;
+			}
+			.toast-content {
+
+				.toast-content-text {
+					color: $white;
+				}
+				.toast-content-time {
+					color: $white;
+				}
+			}
+		}
+		&.active {
+			opacity: 1;
+			pointer-events: initial;
+		}
+		&:after {
+                        @include after-before;
+		   	visibility: hidden;
+		   	height: 0;
+		   	clear: both;
+		}
+	}
+}

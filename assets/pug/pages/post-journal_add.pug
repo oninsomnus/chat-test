@@ -1,0 +1,868 @@
+<!DOCTYPE html>
+html(lang="en")
+    - var title = 'post journal add'
+    include ../blocks/head
+    body.bd-box
+        include ../blocks/header
+        #content
+            .content.content_full.content_post
+                .post-sidebar-box
+                    .post-sidebar
+                        .post-sidebar__btns
+                            button.btn.btn-white Discard
+                            button.btn.btn-white.btn-save Save draft
+                            button.btn.make-a-post Publish
+                        .time-pub
+                            .time-pub__lbl
+                                span Schedule a time to publish
+                                a(href="#") Reset
+                            .time-pub-cont
+                                .time-pub-cont__cell
+                                    input(type="text" placeholder="year").large
+                                    select.large
+                                        option Sep
+                                        option Nov
+                                        option Dec
+                                    input(type="text" placeholder="dd")
+                                .time-pub-cont__cell
+                                    input(type="text" placeholder="00")
+                                    | :
+                                    input(type="text" placeholder="00")
+                                    select.large
+                                        option AM
+                                        option PM
+                        .hr
+
+                        a(href="javascript:;").loc-link
+                            img(src="assets/img/icons/post-mark.png" alt="icon")
+                            | Add location
+
+                        .post-title-inp.m-t-20
+                            input(type="text" placeholder="Add journal title" value="How To Dress Like You’ve Stepped Out Of The 1950’s")#post_title
+
+                        .jour-tags-inp.m-t-20
+                            input(type="text" name="tags" value="Tag example, Tag example 2").jour-tags
+
+                        .jour-peop-tags-inp.m-t-20
+                            input(type="text" name="tags" value="@JohnSmith").jour-peop-tags
+
+                        label.btn-add-file.m-t-20
+                            input(type='file' data-img-upload).btn-add-file__input.hidden
+                            .btn-add-file__preview.hidden
+                                img(src="#" alt="image")
+                            .btn-add-file__cont
+                                img(src="assets/img/icons/plus-24.png" alt="plus")
+                                span.btn-add-file__title Add journal thumbnail
+                                span.btn-add-file__desc Min 800 x 500 px
+                .post-constructor
+                    include ../blocks/post-journal_add-content
+
+                    .post-constructor__title#post_title_out How To Dress Like You’ve Stepped Out Of The 1950’s
+
+                    .post-constructor__initial-letter
+                        span The 1950s was an era that many of us like draw style influence from. This simple style guide will show you how to pull off that 1950s mens clothing and fashion with ease this and every season. Men’s fashion in the 1950s is as popular now than it was back then.
+                        textarea(placeholder="Start writing").post-constructor__textarea The 1950s was an era that many of us like draw style influence from. This simple style guide will show you how to pull off that 1950s mens clothing and fashion with ease this and every season. Men’s fashion in the 1950s is as popular now than it was back then.
+
+
+                    .wireframe.wireframe_draggable
+                        +add-cont
+                        .wireframe__cont
+                            .wireframe__top
+                                button.wireframe__btn(data-tooltip="Move up" data-wireframe-up).
+                                    <svg version="1.1" id="Icons" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                         viewBox="0 0 25.5 13.9" style="enable-background:new 0 0 25.5 13.9;" xml:space="preserve">
+                                    <g id="Arrows-Diagrams__x2F__Arrows__x2F__arrow-up-1">
+                                        <g id="Group_128">
+                                            <g id="Regular_128">
+                                                <g id="Shape_351">
+                                                    <path d="M24,13.9c-0.4,0-0.8-0.1-1.1-0.4L12.8,3.3L2.6,13.5c-0.6,0.6-1.5,0.6-2.1,0s-0.6-1.5,0-2.1L11.2,0.7
+                                                        c0.8-0.8,2.3-0.8,3.2,0l10.7,10.7c0.6,0.6,0.6,1.5,0,2.1C24.8,13.8,24.4,13.9,24,13.9z"/>
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </g>
+                                    </svg>
+                                button.wireframe__btn(data-tooltip="Move down" data-wireframe-down).
+                                    <svg version="1.1" id="Icons" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                         viewBox="0 0 25.5 13.9" style="enable-background:new 0 0 25.5 13.9;" xml:space="preserve">
+                                    <g id="Arrows-Diagrams__x2F__Arrows__x2F__arrow-down-1">
+                                        <g id="Group_51">
+                                            <g id="Regular_51">
+                                                <g id="Shape_225">
+                                                    <path d="M12.8,13.9c-0.6,0-1.2-0.2-1.6-0.7L0.4,2.6C-0.1,2-0.1,1,0.4,0.4C1-0.1,2-0.1,2.6,0.4l10.2,10.2L22.9,0.4
+                                                        c0.6-0.6,1.5-0.6,2.1,0c0.6,0.6,0.6,1.5,0,2.1L14.3,13.3C13.9,13.7,13.3,13.9,12.8,13.9z M12.2,11.2
+                                                        C12.2,11.2,12.2,11.2,12.2,11.2L12.2,11.2z M13.3,11.2L13.3,11.2C13.3,11.2,13.3,11.2,13.3,11.2z"/>
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </g>
+                                    </svg>
+                                .wireframe-options
+                                    button.wireframe__btn(data-tooltip="Options" data-drop-trig).
+                                        <svg version="1.1" id="Icons" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                             viewBox="0 0 24 6.8" style="enable-background:new 0 0 24 6.8;" xml:space="preserve">
+                                        <g id="Interface-Essential__x2F__Menu__x2F__navigation-menu-horizontal">
+                                            <g id="Group_27">
+                                                <g id="navigation-menu-horizontal">
+                                                    <g id="Oval_12">
+                                                        <path d="M3.4,6.7C1.5,6.7,0,5.2,0,3.4S1.5,0,3.4,0s3.4,1.5,3.4,3.4S5.2,6.7,3.4,6.7z M3.4,1.5c-1,0-1.9,0.8-1.9,1.9
+                                                            s0.8,1.9,1.9,1.9s1.9-0.8,1.9-1.9S4.4,1.5,3.4,1.5z"/>
+                                                    </g>
+                                                    <g id="Oval_13">
+                                                        <path d="M20.6,6.7c-1.9,0-3.4-1.5-3.4-3.4S18.8,0,20.6,0S24,1.5,24,3.4S22.5,6.7,20.6,6.7z M20.6,1.5c-1,0-1.9,0.8-1.9,1.9
+                                                            s0.8,1.9,1.9,1.9s1.9-0.8,1.9-1.9S21.7,1.5,20.6,1.5z"/>
+                                                    </g>
+                                                    <g id="Oval_14">
+                                                        <path d="M12,6.7c-1.9,0-3.4-1.5-3.4-3.4S10.1,0,12,0s3.4,1.5,3.4,3.4S13.9,6.7,12,6.7z M12,1.5c-1,0-1.9,0.8-1.9,1.9
+                                                            S11,5.2,12,5.2s1.9-0.8,1.9-1.9S13,1.5,12,1.5z"/>
+                                                    </g>
+                                                </g>
+                                            </g>
+                                        </g>
+                                        </svg>
+                                    ul.wireframe-options__list(data-drop)
+                                        li
+                                            a(href="javascript:;" data-add-photo-caption) Add caption
+                                            a(href="javascript:;" data-rm-photo-caption).hidden Remove caption
+                                        li
+                                            a(href="javascript:;" data-change-photo) Change photo
+                                        li
+                                            a(href="javascript:;" data-del-sec).red Delete section
+                            label.btn-add-file.btn-add-file_lg
+                                input(type='file' data-img-upload multiple).btn-add-file__input.hidden
+                                .btn-add-file__preview.hidden
+                                .btn-add-file__cont
+                                    img(src="assets/img/icons/plus-40.png" alt="plus")
+                                    span.btn-add-file__title Add journal photo
+                                    span.btn-add-file__desc Min 700 x 500 px
+                                    a(href="#").btn-add-file__link Or Choose From Library
+                            .car-preview
+                            textarea(placeholder="Caption").post-constructor__textarea.post-constructor__textarea_i.post-constructor__textarea_author.hidden
+
+                    .wireframe.wireframe_draggable
+                        +add-cont
+                        .wireframe__cont
+                            .wireframe__top
+                                button.wireframe__btn(data-tooltip="Move up" data-wireframe-up).
+                                    <svg version="1.1" id="Icons" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                         viewBox="0 0 25.5 13.9" style="enable-background:new 0 0 25.5 13.9;" xml:space="preserve">
+                                    <g id="Arrows-Diagrams__x2F__Arrows__x2F__arrow-up-1">
+                                        <g id="Group_128">
+                                            <g id="Regular_128">
+                                                <g id="Shape_351">
+                                                    <path d="M24,13.9c-0.4,0-0.8-0.1-1.1-0.4L12.8,3.3L2.6,13.5c-0.6,0.6-1.5,0.6-2.1,0s-0.6-1.5,0-2.1L11.2,0.7
+                                                        c0.8-0.8,2.3-0.8,3.2,0l10.7,10.7c0.6,0.6,0.6,1.5,0,2.1C24.8,13.8,24.4,13.9,24,13.9z"/>
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </g>
+                                    </svg>
+                                button.wireframe__btn(data-tooltip="Move down" data-wireframe-down).
+                                    <svg version="1.1" id="Icons" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                         viewBox="0 0 25.5 13.9" style="enable-background:new 0 0 25.5 13.9;" xml:space="preserve">
+                                    <g id="Arrows-Diagrams__x2F__Arrows__x2F__arrow-down-1">
+                                        <g id="Group_51">
+                                            <g id="Regular_51">
+                                                <g id="Shape_225">
+                                                    <path d="M12.8,13.9c-0.6,0-1.2-0.2-1.6-0.7L0.4,2.6C-0.1,2-0.1,1,0.4,0.4C1-0.1,2-0.1,2.6,0.4l10.2,10.2L22.9,0.4
+                                                        c0.6-0.6,1.5-0.6,2.1,0c0.6,0.6,0.6,1.5,0,2.1L14.3,13.3C13.9,13.7,13.3,13.9,12.8,13.9z M12.2,11.2
+                                                        C12.2,11.2,12.2,11.2,12.2,11.2L12.2,11.2z M13.3,11.2L13.3,11.2C13.3,11.2,13.3,11.2,13.3,11.2z"/>
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </g>
+                                    </svg>
+                                .wireframe-options
+                                    button.wireframe__btn(data-tooltip="Options" data-drop-trig).
+                                        <svg version="1.1" id="Icons" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                             viewBox="0 0 24 6.8" style="enable-background:new 0 0 24 6.8;" xml:space="preserve">
+                                        <g id="Interface-Essential__x2F__Menu__x2F__navigation-menu-horizontal">
+                                            <g id="Group_27">
+                                                <g id="navigation-menu-horizontal">
+                                                    <g id="Oval_12">
+                                                        <path d="M3.4,6.7C1.5,6.7,0,5.2,0,3.4S1.5,0,3.4,0s3.4,1.5,3.4,3.4S5.2,6.7,3.4,6.7z M3.4,1.5c-1,0-1.9,0.8-1.9,1.9
+                                                            s0.8,1.9,1.9,1.9s1.9-0.8,1.9-1.9S4.4,1.5,3.4,1.5z"/>
+                                                    </g>
+                                                    <g id="Oval_13">
+                                                        <path d="M20.6,6.7c-1.9,0-3.4-1.5-3.4-3.4S18.8,0,20.6,0S24,1.5,24,3.4S22.5,6.7,20.6,6.7z M20.6,1.5c-1,0-1.9,0.8-1.9,1.9
+                                                            s0.8,1.9,1.9,1.9s1.9-0.8,1.9-1.9S21.7,1.5,20.6,1.5z"/>
+                                                    </g>
+                                                    <g id="Oval_14">
+                                                        <path d="M12,6.7c-1.9,0-3.4-1.5-3.4-3.4S10.1,0,12,0s3.4,1.5,3.4,3.4S13.9,6.7,12,6.7z M12,1.5c-1,0-1.9,0.8-1.9,1.9
+                                                            S11,5.2,12,5.2s1.9-0.8,1.9-1.9S13,1.5,12,1.5z"/>
+                                                    </g>
+                                                </g>
+                                            </g>
+                                        </g>
+                                        </svg>
+                                    ul.wireframe-options__list(data-drop)
+                                        li
+                                            a(href="javascript:;" data-del-sec).red Delete section
+                            textarea(placeholder="Type your text").post-constructor__textarea.post-constructor__textarea_i
+
+                    .wireframe.wireframe_draggable
+                        +add-cont
+                        .wireframe__cont
+                            .wireframe__top
+                                button.wireframe__btn(data-tooltip="Move up" data-wireframe-up).
+                                    <svg version="1.1" id="Icons" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                         viewBox="0 0 25.5 13.9" style="enable-background:new 0 0 25.5 13.9;" xml:space="preserve">
+                                    <g id="Arrows-Diagrams__x2F__Arrows__x2F__arrow-up-1">
+                                        <g id="Group_128">
+                                            <g id="Regular_128">
+                                                <g id="Shape_351">
+                                                    <path d="M24,13.9c-0.4,0-0.8-0.1-1.1-0.4L12.8,3.3L2.6,13.5c-0.6,0.6-1.5,0.6-2.1,0s-0.6-1.5,0-2.1L11.2,0.7
+                                                        c0.8-0.8,2.3-0.8,3.2,0l10.7,10.7c0.6,0.6,0.6,1.5,0,2.1C24.8,13.8,24.4,13.9,24,13.9z"/>
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </g>
+                                    </svg>
+                                button.wireframe__btn(data-tooltip="Move down" data-wireframe-down).
+                                    <svg version="1.1" id="Icons" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                         viewBox="0 0 25.5 13.9" style="enable-background:new 0 0 25.5 13.9;" xml:space="preserve">
+                                    <g id="Arrows-Diagrams__x2F__Arrows__x2F__arrow-down-1">
+                                        <g id="Group_51">
+                                            <g id="Regular_51">
+                                                <g id="Shape_225">
+                                                    <path d="M12.8,13.9c-0.6,0-1.2-0.2-1.6-0.7L0.4,2.6C-0.1,2-0.1,1,0.4,0.4C1-0.1,2-0.1,2.6,0.4l10.2,10.2L22.9,0.4
+                                                        c0.6-0.6,1.5-0.6,2.1,0c0.6,0.6,0.6,1.5,0,2.1L14.3,13.3C13.9,13.7,13.3,13.9,12.8,13.9z M12.2,11.2
+                                                        C12.2,11.2,12.2,11.2,12.2,11.2L12.2,11.2z M13.3,11.2L13.3,11.2C13.3,11.2,13.3,11.2,13.3,11.2z"/>
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </g>
+                                    </svg>
+                                .wireframe-options
+                                    button.wireframe__btn(data-tooltip="Options" data-drop-trig).
+                                        <svg version="1.1" id="Icons" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                             viewBox="0 0 24 6.8" style="enable-background:new 0 0 24 6.8;" xml:space="preserve">
+                                        <g id="Interface-Essential__x2F__Menu__x2F__navigation-menu-horizontal">
+                                            <g id="Group_27">
+                                                <g id="navigation-menu-horizontal">
+                                                    <g id="Oval_12">
+                                                        <path d="M3.4,6.7C1.5,6.7,0,5.2,0,3.4S1.5,0,3.4,0s3.4,1.5,3.4,3.4S5.2,6.7,3.4,6.7z M3.4,1.5c-1,0-1.9,0.8-1.9,1.9
+                                                            s0.8,1.9,1.9,1.9s1.9-0.8,1.9-1.9S4.4,1.5,3.4,1.5z"/>
+                                                    </g>
+                                                    <g id="Oval_13">
+                                                        <path d="M20.6,6.7c-1.9,0-3.4-1.5-3.4-3.4S18.8,0,20.6,0S24,1.5,24,3.4S22.5,6.7,20.6,6.7z M20.6,1.5c-1,0-1.9,0.8-1.9,1.9
+                                                            s0.8,1.9,1.9,1.9s1.9-0.8,1.9-1.9S21.7,1.5,20.6,1.5z"/>
+                                                    </g>
+                                                    <g id="Oval_14">
+                                                        <path d="M12,6.7c-1.9,0-3.4-1.5-3.4-3.4S10.1,0,12,0s3.4,1.5,3.4,3.4S13.9,6.7,12,6.7z M12,1.5c-1,0-1.9,0.8-1.9,1.9
+                                                            S11,5.2,12,5.2s1.9-0.8,1.9-1.9S13,1.5,12,1.5z"/>
+                                                    </g>
+                                                </g>
+                                            </g>
+                                        </g>
+                                        </svg>
+                                    ul.wireframe-options__list(data-drop)
+                                        li
+                                            a(href="javascript:;" data-switch-photo) Switch photo
+                                        li
+                                            a(href="javascript:;" data-change-photo) Change photo
+                                        li
+                                            a(href="javascript:;" data-del-sec).red Delete section
+                            .post-constructor__img-text
+                                label.btn-add-file
+                                    input(type='file' data-img-upload).btn-add-file__input.hidden
+                                    .btn-add-file__preview.hidden
+                                        img(src="#" alt="image")
+                                    .btn-add-file__cont
+                                        img(src="assets/img/icons/plus-24.png" alt="plus")
+                                div(data-placeholder="Type your text" contenteditable="true").post-constructor__textarea.placeholder.emp
+                                textarea.hidden
+
+                    .wireframe.wireframe_draggable
+                        +add-cont
+                        .wireframe__cont
+                            .wireframe__top
+                                button.wireframe__btn(data-tooltip="Move up" data-wireframe-up).
+                                    <svg version="1.1" id="Icons" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                         viewBox="0 0 25.5 13.9" style="enable-background:new 0 0 25.5 13.9;" xml:space="preserve">
+                                    <g id="Arrows-Diagrams__x2F__Arrows__x2F__arrow-up-1">
+                                        <g id="Group_128">
+                                            <g id="Regular_128">
+                                                <g id="Shape_351">
+                                                    <path d="M24,13.9c-0.4,0-0.8-0.1-1.1-0.4L12.8,3.3L2.6,13.5c-0.6,0.6-1.5,0.6-2.1,0s-0.6-1.5,0-2.1L11.2,0.7
+                                                        c0.8-0.8,2.3-0.8,3.2,0l10.7,10.7c0.6,0.6,0.6,1.5,0,2.1C24.8,13.8,24.4,13.9,24,13.9z"/>
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </g>
+                                    </svg>
+                                button.wireframe__btn(data-tooltip="Move down" data-wireframe-down).
+                                    <svg version="1.1" id="Icons" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                         viewBox="0 0 25.5 13.9" style="enable-background:new 0 0 25.5 13.9;" xml:space="preserve">
+                                    <g id="Arrows-Diagrams__x2F__Arrows__x2F__arrow-down-1">
+                                        <g id="Group_51">
+                                            <g id="Regular_51">
+                                                <g id="Shape_225">
+                                                    <path d="M12.8,13.9c-0.6,0-1.2-0.2-1.6-0.7L0.4,2.6C-0.1,2-0.1,1,0.4,0.4C1-0.1,2-0.1,2.6,0.4l10.2,10.2L22.9,0.4
+                                                        c0.6-0.6,1.5-0.6,2.1,0c0.6,0.6,0.6,1.5,0,2.1L14.3,13.3C13.9,13.7,13.3,13.9,12.8,13.9z M12.2,11.2
+                                                        C12.2,11.2,12.2,11.2,12.2,11.2L12.2,11.2z M13.3,11.2L13.3,11.2C13.3,11.2,13.3,11.2,13.3,11.2z"/>
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </g>
+                                    </svg>
+                                .wireframe-options
+                                    button.wireframe__btn(data-tooltip="Options" data-drop-trig).
+                                        <svg version="1.1" id="Icons" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                             viewBox="0 0 24 6.8" style="enable-background:new 0 0 24 6.8;" xml:space="preserve">
+                                        <g id="Interface-Essential__x2F__Menu__x2F__navigation-menu-horizontal">
+                                            <g id="Group_27">
+                                                <g id="navigation-menu-horizontal">
+                                                    <g id="Oval_12">
+                                                        <path d="M3.4,6.7C1.5,6.7,0,5.2,0,3.4S1.5,0,3.4,0s3.4,1.5,3.4,3.4S5.2,6.7,3.4,6.7z M3.4,1.5c-1,0-1.9,0.8-1.9,1.9
+                                                            s0.8,1.9,1.9,1.9s1.9-0.8,1.9-1.9S4.4,1.5,3.4,1.5z"/>
+                                                    </g>
+                                                    <g id="Oval_13">
+                                                        <path d="M20.6,6.7c-1.9,0-3.4-1.5-3.4-3.4S18.8,0,20.6,0S24,1.5,24,3.4S22.5,6.7,20.6,6.7z M20.6,1.5c-1,0-1.9,0.8-1.9,1.9
+                                                            s0.8,1.9,1.9,1.9s1.9-0.8,1.9-1.9S21.7,1.5,20.6,1.5z"/>
+                                                    </g>
+                                                    <g id="Oval_14">
+                                                        <path d="M12,6.7c-1.9,0-3.4-1.5-3.4-3.4S10.1,0,12,0s3.4,1.5,3.4,3.4S13.9,6.7,12,6.7z M12,1.5c-1,0-1.9,0.8-1.9,1.9
+                                                            S11,5.2,12,5.2s1.9-0.8,1.9-1.9S13,1.5,12,1.5z"/>
+                                                    </g>
+                                                </g>
+                                            </g>
+                                        </g>
+                                        </svg>
+                                    ul.wireframe-options__list(data-drop)
+                                        li
+                                            a(href="#") Switch Video
+                                        li
+                                            a(href="javascript:;" data-del-sec).red Delete section
+                            label.btn-add-file.btn-add-file_lg
+                                .btn-add-file__cont
+                                    img(src="assets/img/icons/plus-40.png" alt="plus")
+                                    span.btn-add-file__title Add journal video
+                                    a(href="#").btn-add-file__link Or Choose From Library
+
+                    .wireframe.wireframe_draggable
+                        +add-cont
+                        .wireframe__cont
+                            .wireframe__top
+                                button.wireframe__btn(data-tooltip="Move up" data-wireframe-up).
+                                    <svg version="1.1" id="Icons" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                         viewBox="0 0 25.5 13.9" style="enable-background:new 0 0 25.5 13.9;" xml:space="preserve">
+                                    <g id="Arrows-Diagrams__x2F__Arrows__x2F__arrow-up-1">
+                                        <g id="Group_128">
+                                            <g id="Regular_128">
+                                                <g id="Shape_351">
+                                                    <path d="M24,13.9c-0.4,0-0.8-0.1-1.1-0.4L12.8,3.3L2.6,13.5c-0.6,0.6-1.5,0.6-2.1,0s-0.6-1.5,0-2.1L11.2,0.7
+                                                        c0.8-0.8,2.3-0.8,3.2,0l10.7,10.7c0.6,0.6,0.6,1.5,0,2.1C24.8,13.8,24.4,13.9,24,13.9z"/>
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </g>
+                                    </svg>
+                                button.wireframe__btn(data-tooltip="Move down" data-wireframe-down).
+                                    <svg version="1.1" id="Icons" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                         viewBox="0 0 25.5 13.9" style="enable-background:new 0 0 25.5 13.9;" xml:space="preserve">
+                                    <g id="Arrows-Diagrams__x2F__Arrows__x2F__arrow-down-1">
+                                        <g id="Group_51">
+                                            <g id="Regular_51">
+                                                <g id="Shape_225">
+                                                    <path d="M12.8,13.9c-0.6,0-1.2-0.2-1.6-0.7L0.4,2.6C-0.1,2-0.1,1,0.4,0.4C1-0.1,2-0.1,2.6,0.4l10.2,10.2L22.9,0.4
+                                                        c0.6-0.6,1.5-0.6,2.1,0c0.6,0.6,0.6,1.5,0,2.1L14.3,13.3C13.9,13.7,13.3,13.9,12.8,13.9z M12.2,11.2
+                                                        C12.2,11.2,12.2,11.2,12.2,11.2L12.2,11.2z M13.3,11.2L13.3,11.2C13.3,11.2,13.3,11.2,13.3,11.2z"/>
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </g>
+                                    </svg>
+                                .wireframe-options
+                                    button.wireframe__btn(data-tooltip="Options" data-drop-trig).
+                                        <svg version="1.1" id="Icons" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                             viewBox="0 0 24 6.8" style="enable-background:new 0 0 24 6.8;" xml:space="preserve">
+                                        <g id="Interface-Essential__x2F__Menu__x2F__navigation-menu-horizontal">
+                                            <g id="Group_27">
+                                                <g id="navigation-menu-horizontal">
+                                                    <g id="Oval_12">
+                                                        <path d="M3.4,6.7C1.5,6.7,0,5.2,0,3.4S1.5,0,3.4,0s3.4,1.5,3.4,3.4S5.2,6.7,3.4,6.7z M3.4,1.5c-1,0-1.9,0.8-1.9,1.9
+                                                            s0.8,1.9,1.9,1.9s1.9-0.8,1.9-1.9S4.4,1.5,3.4,1.5z"/>
+                                                    </g>
+                                                    <g id="Oval_13">
+                                                        <path d="M20.6,6.7c-1.9,0-3.4-1.5-3.4-3.4S18.8,0,20.6,0S24,1.5,24,3.4S22.5,6.7,20.6,6.7z M20.6,1.5c-1,0-1.9,0.8-1.9,1.9
+                                                            s0.8,1.9,1.9,1.9s1.9-0.8,1.9-1.9S21.7,1.5,20.6,1.5z"/>
+                                                    </g>
+                                                    <g id="Oval_14">
+                                                        <path d="M12,6.7c-1.9,0-3.4-1.5-3.4-3.4S10.1,0,12,0s3.4,1.5,3.4,3.4S13.9,6.7,12,6.7z M12,1.5c-1,0-1.9,0.8-1.9,1.9
+                                                            S11,5.2,12,5.2s1.9-0.8,1.9-1.9S13,1.5,12,1.5z"/>
+                                                    </g>
+                                                </g>
+                                            </g>
+                                        </g>
+                                        </svg>
+                                    ul.wireframe-options__list(data-drop)
+                                        li
+                                            a(href="javascript:;" data-add-cap).hidden Add caption
+                                            a(href="javascript:;" data-rm-cap) Remove caption
+                                        li
+                                            a(href="javascript:;" data-del-sec).red Delete section
+                            .post-constructor__quote
+                                textarea(placeholder="Write quote").post-constructor__textarea.post-constructor__textarea_i.post-constructor__textarea_quote "I’ve wrestled with alligators. I’ve tussled with a whale. I done handcuffed lightning. And throw thunder in jail."
+                                textarea(placeholder="Author").post-constructor__textarea.post-constructor__textarea_i.post-constructor__textarea_author MUHAMMAD ALI
+
+                    .wireframe.wireframe_draggable
+                        +add-cont
+                        .wireframe__cont
+                            .wireframe__top
+                                button.wireframe__btn(data-tooltip="Move up" data-wireframe-up).
+                                    <svg version="1.1" id="Icons" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                         viewBox="0 0 25.5 13.9" style="enable-background:new 0 0 25.5 13.9;" xml:space="preserve">
+                                    <g id="Arrows-Diagrams__x2F__Arrows__x2F__arrow-up-1">
+                                        <g id="Group_128">
+                                            <g id="Regular_128">
+                                                <g id="Shape_351">
+                                                    <path d="M24,13.9c-0.4,0-0.8-0.1-1.1-0.4L12.8,3.3L2.6,13.5c-0.6,0.6-1.5,0.6-2.1,0s-0.6-1.5,0-2.1L11.2,0.7
+                                                        c0.8-0.8,2.3-0.8,3.2,0l10.7,10.7c0.6,0.6,0.6,1.5,0,2.1C24.8,13.8,24.4,13.9,24,13.9z"/>
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </g>
+                                    </svg>
+                                button.wireframe__btn(data-tooltip="Move down" data-wireframe-down).
+                                    <svg version="1.1" id="Icons" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                         viewBox="0 0 25.5 13.9" style="enable-background:new 0 0 25.5 13.9;" xml:space="preserve">
+                                    <g id="Arrows-Diagrams__x2F__Arrows__x2F__arrow-down-1">
+                                        <g id="Group_51">
+                                            <g id="Regular_51">
+                                                <g id="Shape_225">
+                                                    <path d="M12.8,13.9c-0.6,0-1.2-0.2-1.6-0.7L0.4,2.6C-0.1,2-0.1,1,0.4,0.4C1-0.1,2-0.1,2.6,0.4l10.2,10.2L22.9,0.4
+                                                        c0.6-0.6,1.5-0.6,2.1,0c0.6,0.6,0.6,1.5,0,2.1L14.3,13.3C13.9,13.7,13.3,13.9,12.8,13.9z M12.2,11.2
+                                                        C12.2,11.2,12.2,11.2,12.2,11.2L12.2,11.2z M13.3,11.2L13.3,11.2C13.3,11.2,13.3,11.2,13.3,11.2z"/>
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </g>
+                                    </svg>
+                                .wireframe-options
+                                    button.wireframe__btn(data-tooltip="Options" data-drop-trig).
+                                        <svg version="1.1" id="Icons" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                             viewBox="0 0 24 6.8" style="enable-background:new 0 0 24 6.8;" xml:space="preserve">
+                                        <g id="Interface-Essential__x2F__Menu__x2F__navigation-menu-horizontal">
+                                            <g id="Group_27">
+                                                <g id="navigation-menu-horizontal">
+                                                    <g id="Oval_12">
+                                                        <path d="M3.4,6.7C1.5,6.7,0,5.2,0,3.4S1.5,0,3.4,0s3.4,1.5,3.4,3.4S5.2,6.7,3.4,6.7z M3.4,1.5c-1,0-1.9,0.8-1.9,1.9
+                                                            s0.8,1.9,1.9,1.9s1.9-0.8,1.9-1.9S4.4,1.5,3.4,1.5z"/>
+                                                    </g>
+                                                    <g id="Oval_13">
+                                                        <path d="M20.6,6.7c-1.9,0-3.4-1.5-3.4-3.4S18.8,0,20.6,0S24,1.5,24,3.4S22.5,6.7,20.6,6.7z M20.6,1.5c-1,0-1.9,0.8-1.9,1.9
+                                                            s0.8,1.9,1.9,1.9s1.9-0.8,1.9-1.9S21.7,1.5,20.6,1.5z"/>
+                                                    </g>
+                                                    <g id="Oval_14">
+                                                        <path d="M12,6.7c-1.9,0-3.4-1.5-3.4-3.4S10.1,0,12,0s3.4,1.5,3.4,3.4S13.9,6.7,12,6.7z M12,1.5c-1,0-1.9,0.8-1.9,1.9
+                                                            S11,5.2,12,5.2s1.9-0.8,1.9-1.9S13,1.5,12,1.5z"/>
+                                                    </g>
+                                                </g>
+                                            </g>
+                                        </g>
+                                        </svg>
+                                    ul.wireframe-options__list(data-drop)
+                                        li
+                                            a(href="javascript:;" data-del-sec).red Delete section
+                            textarea(placeholder="Type your text").post-constructor__textarea.post-constructor__textarea_i
+
+                    .wireframe.wireframe_draggable
+                        +add-cont
+                        .wireframe__cont
+                            .wireframe__top
+                                button.wireframe__btn(data-tooltip="Move up" data-wireframe-up).
+                                    <svg version="1.1" id="Icons" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                         viewBox="0 0 25.5 13.9" style="enable-background:new 0 0 25.5 13.9;" xml:space="preserve">
+                                    <g id="Arrows-Diagrams__x2F__Arrows__x2F__arrow-up-1">
+                                        <g id="Group_128">
+                                            <g id="Regular_128">
+                                                <g id="Shape_351">
+                                                    <path d="M24,13.9c-0.4,0-0.8-0.1-1.1-0.4L12.8,3.3L2.6,13.5c-0.6,0.6-1.5,0.6-2.1,0s-0.6-1.5,0-2.1L11.2,0.7
+                                                        c0.8-0.8,2.3-0.8,3.2,0l10.7,10.7c0.6,0.6,0.6,1.5,0,2.1C24.8,13.8,24.4,13.9,24,13.9z"/>
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </g>
+                                    </svg>
+                                button.wireframe__btn(data-tooltip="Move down" data-wireframe-down).
+                                    <svg version="1.1" id="Icons" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                         viewBox="0 0 25.5 13.9" style="enable-background:new 0 0 25.5 13.9;" xml:space="preserve">
+                                    <g id="Arrows-Diagrams__x2F__Arrows__x2F__arrow-down-1">
+                                        <g id="Group_51">
+                                            <g id="Regular_51">
+                                                <g id="Shape_225">
+                                                    <path d="M12.8,13.9c-0.6,0-1.2-0.2-1.6-0.7L0.4,2.6C-0.1,2-0.1,1,0.4,0.4C1-0.1,2-0.1,2.6,0.4l10.2,10.2L22.9,0.4
+                                                        c0.6-0.6,1.5-0.6,2.1,0c0.6,0.6,0.6,1.5,0,2.1L14.3,13.3C13.9,13.7,13.3,13.9,12.8,13.9z M12.2,11.2
+                                                        C12.2,11.2,12.2,11.2,12.2,11.2L12.2,11.2z M13.3,11.2L13.3,11.2C13.3,11.2,13.3,11.2,13.3,11.2z"/>
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </g>
+                                    </svg>
+                                .wireframe-options
+                                    button.wireframe__btn(data-tooltip="Options" data-drop-trig).
+                                        <svg version="1.1" id="Icons" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                             viewBox="0 0 24 6.8" style="enable-background:new 0 0 24 6.8;" xml:space="preserve">
+                                        <g id="Interface-Essential__x2F__Menu__x2F__navigation-menu-horizontal">
+                                            <g id="Group_27">
+                                                <g id="navigation-menu-horizontal">
+                                                    <g id="Oval_12">
+                                                        <path d="M3.4,6.7C1.5,6.7,0,5.2,0,3.4S1.5,0,3.4,0s3.4,1.5,3.4,3.4S5.2,6.7,3.4,6.7z M3.4,1.5c-1,0-1.9,0.8-1.9,1.9
+                                                            s0.8,1.9,1.9,1.9s1.9-0.8,1.9-1.9S4.4,1.5,3.4,1.5z"/>
+                                                    </g>
+                                                    <g id="Oval_13">
+                                                        <path d="M20.6,6.7c-1.9,0-3.4-1.5-3.4-3.4S18.8,0,20.6,0S24,1.5,24,3.4S22.5,6.7,20.6,6.7z M20.6,1.5c-1,0-1.9,0.8-1.9,1.9
+                                                            s0.8,1.9,1.9,1.9s1.9-0.8,1.9-1.9S21.7,1.5,20.6,1.5z"/>
+                                                    </g>
+                                                    <g id="Oval_14">
+                                                        <path d="M12,6.7c-1.9,0-3.4-1.5-3.4-3.4S10.1,0,12,0s3.4,1.5,3.4,3.4S13.9,6.7,12,6.7z M12,1.5c-1,0-1.9,0.8-1.9,1.9
+                                                            S11,5.2,12,5.2s1.9-0.8,1.9-1.9S13,1.5,12,1.5z"/>
+                                                    </g>
+                                                </g>
+                                            </g>
+                                        </g>
+                                        </svg>
+                                    ul.wireframe-options__list(data-drop)
+                                        li
+                                            a(href="javascript:;" data-del-sec).red Delete section
+                            .post-constructor__divider
+
+                    .wireframe.wireframe_draggable
+                        +add-cont
+                        .wireframe__cont
+                            .wireframe__top
+                                button.wireframe__btn(data-tooltip="Move up" data-wireframe-up).
+                                    <svg version="1.1" id="Icons" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                         viewBox="0 0 25.5 13.9" style="enable-background:new 0 0 25.5 13.9;" xml:space="preserve">
+                                    <g id="Arrows-Diagrams__x2F__Arrows__x2F__arrow-up-1">
+                                        <g id="Group_128">
+                                            <g id="Regular_128">
+                                                <g id="Shape_351">
+                                                    <path d="M24,13.9c-0.4,0-0.8-0.1-1.1-0.4L12.8,3.3L2.6,13.5c-0.6,0.6-1.5,0.6-2.1,0s-0.6-1.5,0-2.1L11.2,0.7
+                                                        c0.8-0.8,2.3-0.8,3.2,0l10.7,10.7c0.6,0.6,0.6,1.5,0,2.1C24.8,13.8,24.4,13.9,24,13.9z"/>
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </g>
+                                    </svg>
+                                button.wireframe__btn(data-tooltip="Move down" data-wireframe-down).
+                                    <svg version="1.1" id="Icons" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                         viewBox="0 0 25.5 13.9" style="enable-background:new 0 0 25.5 13.9;" xml:space="preserve">
+                                    <g id="Arrows-Diagrams__x2F__Arrows__x2F__arrow-down-1">
+                                        <g id="Group_51">
+                                            <g id="Regular_51">
+                                                <g id="Shape_225">
+                                                    <path d="M12.8,13.9c-0.6,0-1.2-0.2-1.6-0.7L0.4,2.6C-0.1,2-0.1,1,0.4,0.4C1-0.1,2-0.1,2.6,0.4l10.2,10.2L22.9,0.4
+                                                        c0.6-0.6,1.5-0.6,2.1,0c0.6,0.6,0.6,1.5,0,2.1L14.3,13.3C13.9,13.7,13.3,13.9,12.8,13.9z M12.2,11.2
+                                                        C12.2,11.2,12.2,11.2,12.2,11.2L12.2,11.2z M13.3,11.2L13.3,11.2C13.3,11.2,13.3,11.2,13.3,11.2z"/>
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </g>
+                                    </svg>
+                                .wireframe-options
+                                    button.wireframe__btn(data-tooltip="Options" data-drop-trig).
+                                        <svg version="1.1" id="Icons" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                             viewBox="0 0 24 6.8" style="enable-background:new 0 0 24 6.8;" xml:space="preserve">
+                                        <g id="Interface-Essential__x2F__Menu__x2F__navigation-menu-horizontal">
+                                            <g id="Group_27">
+                                                <g id="navigation-menu-horizontal">
+                                                    <g id="Oval_12">
+                                                        <path d="M3.4,6.7C1.5,6.7,0,5.2,0,3.4S1.5,0,3.4,0s3.4,1.5,3.4,3.4S5.2,6.7,3.4,6.7z M3.4,1.5c-1,0-1.9,0.8-1.9,1.9
+                                                            s0.8,1.9,1.9,1.9s1.9-0.8,1.9-1.9S4.4,1.5,3.4,1.5z"/>
+                                                    </g>
+                                                    <g id="Oval_13">
+                                                        <path d="M20.6,6.7c-1.9,0-3.4-1.5-3.4-3.4S18.8,0,20.6,0S24,1.5,24,3.4S22.5,6.7,20.6,6.7z M20.6,1.5c-1,0-1.9,0.8-1.9,1.9
+                                                            s0.8,1.9,1.9,1.9s1.9-0.8,1.9-1.9S21.7,1.5,20.6,1.5z"/>
+                                                    </g>
+                                                    <g id="Oval_14">
+                                                        <path d="M12,6.7c-1.9,0-3.4-1.5-3.4-3.4S10.1,0,12,0s3.4,1.5,3.4,3.4S13.9,6.7,12,6.7z M12,1.5c-1,0-1.9,0.8-1.9,1.9
+                                                            S11,5.2,12,5.2s1.9-0.8,1.9-1.9S13,1.5,12,1.5z"/>
+                                                    </g>
+                                                </g>
+                                            </g>
+                                        </g>
+                                        </svg>
+                                    ul.wireframe-options__list(data-drop)
+                                        li
+                                            a(href="javascript:;" data-del-sec).red Delete section
+                            textarea(placeholder="Type your text").post-constructor__textarea.post-constructor__textarea_i
+
+                    .wireframe.wireframe_draggable
+                        +add-cont
+                        .wireframe__cont
+                            .wireframe__top
+                                button.wireframe__btn(data-tooltip="Move up" data-wireframe-up).
+                                    <svg version="1.1" id="Icons" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                         viewBox="0 0 25.5 13.9" style="enable-background:new 0 0 25.5 13.9;" xml:space="preserve">
+                                    <g id="Arrows-Diagrams__x2F__Arrows__x2F__arrow-up-1">
+                                        <g id="Group_128">
+                                            <g id="Regular_128">
+                                                <g id="Shape_351">
+                                                    <path d="M24,13.9c-0.4,0-0.8-0.1-1.1-0.4L12.8,3.3L2.6,13.5c-0.6,0.6-1.5,0.6-2.1,0s-0.6-1.5,0-2.1L11.2,0.7
+                                                        c0.8-0.8,2.3-0.8,3.2,0l10.7,10.7c0.6,0.6,0.6,1.5,0,2.1C24.8,13.8,24.4,13.9,24,13.9z"/>
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </g>
+                                    </svg>
+                                button.wireframe__btn(data-tooltip="Move down" data-wireframe-down).
+                                    <svg version="1.1" id="Icons" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                         viewBox="0 0 25.5 13.9" style="enable-background:new 0 0 25.5 13.9;" xml:space="preserve">
+                                    <g id="Arrows-Diagrams__x2F__Arrows__x2F__arrow-down-1">
+                                        <g id="Group_51">
+                                            <g id="Regular_51">
+                                                <g id="Shape_225">
+                                                    <path d="M12.8,13.9c-0.6,0-1.2-0.2-1.6-0.7L0.4,2.6C-0.1,2-0.1,1,0.4,0.4C1-0.1,2-0.1,2.6,0.4l10.2,10.2L22.9,0.4
+                                                        c0.6-0.6,1.5-0.6,2.1,0c0.6,0.6,0.6,1.5,0,2.1L14.3,13.3C13.9,13.7,13.3,13.9,12.8,13.9z M12.2,11.2
+                                                        C12.2,11.2,12.2,11.2,12.2,11.2L12.2,11.2z M13.3,11.2L13.3,11.2C13.3,11.2,13.3,11.2,13.3,11.2z"/>
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </g>
+                                    </svg>
+                                .wireframe-options
+                                    button.wireframe__btn(data-tooltip="Options" data-drop-trig).
+                                        <svg version="1.1" id="Icons" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                             viewBox="0 0 24 6.8" style="enable-background:new 0 0 24 6.8;" xml:space="preserve">
+                                        <g id="Interface-Essential__x2F__Menu__x2F__navigation-menu-horizontal">
+                                            <g id="Group_27">
+                                                <g id="navigation-menu-horizontal">
+                                                    <g id="Oval_12">
+                                                        <path d="M3.4,6.7C1.5,6.7,0,5.2,0,3.4S1.5,0,3.4,0s3.4,1.5,3.4,3.4S5.2,6.7,3.4,6.7z M3.4,1.5c-1,0-1.9,0.8-1.9,1.9
+                                                            s0.8,1.9,1.9,1.9s1.9-0.8,1.9-1.9S4.4,1.5,3.4,1.5z"/>
+                                                    </g>
+                                                    <g id="Oval_13">
+                                                        <path d="M20.6,6.7c-1.9,0-3.4-1.5-3.4-3.4S18.8,0,20.6,0S24,1.5,24,3.4S22.5,6.7,20.6,6.7z M20.6,1.5c-1,0-1.9,0.8-1.9,1.9
+                                                            s0.8,1.9,1.9,1.9s1.9-0.8,1.9-1.9S21.7,1.5,20.6,1.5z"/>
+                                                    </g>
+                                                    <g id="Oval_14">
+                                                        <path d="M12,6.7c-1.9,0-3.4-1.5-3.4-3.4S10.1,0,12,0s3.4,1.5,3.4,3.4S13.9,6.7,12,6.7z M12,1.5c-1,0-1.9,0.8-1.9,1.9
+                                                            S11,5.2,12,5.2s1.9-0.8,1.9-1.9S13,1.5,12,1.5z"/>
+                                                    </g>
+                                                </g>
+                                            </g>
+                                        </g>
+                                        </svg>
+                                    ul.wireframe-options__list(data-drop)
+                                        li
+                                            a(href="javascript:;" data-switch-photo) Switch photo
+                                        li
+                                            a(href="javascript:;" data-change-photo) Change photo
+                                        li
+                                            a(href="javascript:;" data-del-sec).red Delete section
+                            .post-constructor__img-text.post-constructor__img-text_reverse
+                                label.btn-add-file
+                                    input(type='file' data-img-upload).btn-add-file__input.hidden
+                                    .btn-add-file__preview.hidden
+                                        img(src="#" alt="image")
+                                    .btn-add-file__cont
+                                        img(src="assets/img/icons/plus-24.png" alt="plus")
+                                div(data-placeholder="Type your text" contenteditable="true").post-constructor__textarea.placeholder.emp
+                                textarea.hidden
+
+                    .wireframe.wireframe_draggable
+                        +add-cont
+                        .wireframe__cont
+                            .wireframe__top
+                                button.wireframe__btn(data-tooltip="Move up" data-wireframe-up).
+                                    <svg version="1.1" id="Icons" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                         viewBox="0 0 25.5 13.9" style="enable-background:new 0 0 25.5 13.9;" xml:space="preserve">
+                                    <g id="Arrows-Diagrams__x2F__Arrows__x2F__arrow-up-1">
+                                        <g id="Group_128">
+                                            <g id="Regular_128">
+                                                <g id="Shape_351">
+                                                    <path d="M24,13.9c-0.4,0-0.8-0.1-1.1-0.4L12.8,3.3L2.6,13.5c-0.6,0.6-1.5,0.6-2.1,0s-0.6-1.5,0-2.1L11.2,0.7
+                                                        c0.8-0.8,2.3-0.8,3.2,0l10.7,10.7c0.6,0.6,0.6,1.5,0,2.1C24.8,13.8,24.4,13.9,24,13.9z"/>
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </g>
+                                    </svg>
+                                button.wireframe__btn(data-tooltip="Move down" data-wireframe-down).
+                                    <svg version="1.1" id="Icons" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                         viewBox="0 0 25.5 13.9" style="enable-background:new 0 0 25.5 13.9;" xml:space="preserve">
+                                    <g id="Arrows-Diagrams__x2F__Arrows__x2F__arrow-down-1">
+                                        <g id="Group_51">
+                                            <g id="Regular_51">
+                                                <g id="Shape_225">
+                                                    <path d="M12.8,13.9c-0.6,0-1.2-0.2-1.6-0.7L0.4,2.6C-0.1,2-0.1,1,0.4,0.4C1-0.1,2-0.1,2.6,0.4l10.2,10.2L22.9,0.4
+                                                        c0.6-0.6,1.5-0.6,2.1,0c0.6,0.6,0.6,1.5,0,2.1L14.3,13.3C13.9,13.7,13.3,13.9,12.8,13.9z M12.2,11.2
+                                                        C12.2,11.2,12.2,11.2,12.2,11.2L12.2,11.2z M13.3,11.2L13.3,11.2C13.3,11.2,13.3,11.2,13.3,11.2z"/>
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </g>
+                                    </svg>
+                                .wireframe-options
+                                    button.wireframe__btn(data-tooltip="Options" data-drop-trig).
+                                        <svg version="1.1" id="Icons" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                             viewBox="0 0 24 6.8" style="enable-background:new 0 0 24 6.8;" xml:space="preserve">
+                                        <g id="Interface-Essential__x2F__Menu__x2F__navigation-menu-horizontal">
+                                            <g id="Group_27">
+                                                <g id="navigation-menu-horizontal">
+                                                    <g id="Oval_12">
+                                                        <path d="M3.4,6.7C1.5,6.7,0,5.2,0,3.4S1.5,0,3.4,0s3.4,1.5,3.4,3.4S5.2,6.7,3.4,6.7z M3.4,1.5c-1,0-1.9,0.8-1.9,1.9
+                                                            s0.8,1.9,1.9,1.9s1.9-0.8,1.9-1.9S4.4,1.5,3.4,1.5z"/>
+                                                    </g>
+                                                    <g id="Oval_13">
+                                                        <path d="M20.6,6.7c-1.9,0-3.4-1.5-3.4-3.4S18.8,0,20.6,0S24,1.5,24,3.4S22.5,6.7,20.6,6.7z M20.6,1.5c-1,0-1.9,0.8-1.9,1.9
+                                                            s0.8,1.9,1.9,1.9s1.9-0.8,1.9-1.9S21.7,1.5,20.6,1.5z"/>
+                                                    </g>
+                                                    <g id="Oval_14">
+                                                        <path d="M12,6.7c-1.9,0-3.4-1.5-3.4-3.4S10.1,0,12,0s3.4,1.5,3.4,3.4S13.9,6.7,12,6.7z M12,1.5c-1,0-1.9,0.8-1.9,1.9
+                                                            S11,5.2,12,5.2s1.9-0.8,1.9-1.9S13,1.5,12,1.5z"/>
+                                                    </g>
+                                                </g>
+                                            </g>
+                                        </g>
+                                        </svg>
+                                    ul.wireframe-options__list(data-drop)
+                                        li
+                                            a(href="javascript:;" data-add-cap) Add caption
+                                            a(href="javascript:;" data-rm-cap).hidden Remove caption
+                                        li
+                                            a(href="javascript:;" data-del-sec).red Delete section
+                            .post-constructor__quote
+                                textarea(placeholder="Write quote").post-constructor__textarea.post-constructor__textarea_i.post-constructor__textarea_quote
+                                textarea(placeholder="Author").post-constructor__textarea.post-constructor__textarea_i.post-constructor__textarea_author.hidden
+
+                    .wireframe.wireframe_draggable
+                        +add-cont
+                        .wireframe__cont
+                            .wireframe__top
+                                button.wireframe__btn(data-tooltip="Move up" data-wireframe-up).
+                                    <svg version="1.1" id="Icons" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                         viewBox="0 0 25.5 13.9" style="enable-background:new 0 0 25.5 13.9;" xml:space="preserve">
+                                    <g id="Arrows-Diagrams__x2F__Arrows__x2F__arrow-up-1">
+                                        <g id="Group_128">
+                                            <g id="Regular_128">
+                                                <g id="Shape_351">
+                                                    <path d="M24,13.9c-0.4,0-0.8-0.1-1.1-0.4L12.8,3.3L2.6,13.5c-0.6,0.6-1.5,0.6-2.1,0s-0.6-1.5,0-2.1L11.2,0.7
+                                                        c0.8-0.8,2.3-0.8,3.2,0l10.7,10.7c0.6,0.6,0.6,1.5,0,2.1C24.8,13.8,24.4,13.9,24,13.9z"/>
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </g>
+                                    </svg>
+                                button.wireframe__btn(data-tooltip="Move down" data-wireframe-down).
+                                    <svg version="1.1" id="Icons" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                         viewBox="0 0 25.5 13.9" style="enable-background:new 0 0 25.5 13.9;" xml:space="preserve">
+                                    <g id="Arrows-Diagrams__x2F__Arrows__x2F__arrow-down-1">
+                                        <g id="Group_51">
+                                            <g id="Regular_51">
+                                                <g id="Shape_225">
+                                                    <path d="M12.8,13.9c-0.6,0-1.2-0.2-1.6-0.7L0.4,2.6C-0.1,2-0.1,1,0.4,0.4C1-0.1,2-0.1,2.6,0.4l10.2,10.2L22.9,0.4
+                                                        c0.6-0.6,1.5-0.6,2.1,0c0.6,0.6,0.6,1.5,0,2.1L14.3,13.3C13.9,13.7,13.3,13.9,12.8,13.9z M12.2,11.2
+                                                        C12.2,11.2,12.2,11.2,12.2,11.2L12.2,11.2z M13.3,11.2L13.3,11.2C13.3,11.2,13.3,11.2,13.3,11.2z"/>
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </g>
+                                    </svg>
+                                .wireframe-options
+                                    button.wireframe__btn(data-tooltip="Options" data-drop-trig).
+                                        <svg version="1.1" id="Icons" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                             viewBox="0 0 24 6.8" style="enable-background:new 0 0 24 6.8;" xml:space="preserve">
+                                        <g id="Interface-Essential__x2F__Menu__x2F__navigation-menu-horizontal">
+                                            <g id="Group_27">
+                                                <g id="navigation-menu-horizontal">
+                                                    <g id="Oval_12">
+                                                        <path d="M3.4,6.7C1.5,6.7,0,5.2,0,3.4S1.5,0,3.4,0s3.4,1.5,3.4,3.4S5.2,6.7,3.4,6.7z M3.4,1.5c-1,0-1.9,0.8-1.9,1.9
+                                                            s0.8,1.9,1.9,1.9s1.9-0.8,1.9-1.9S4.4,1.5,3.4,1.5z"/>
+                                                    </g>
+                                                    <g id="Oval_13">
+                                                        <path d="M20.6,6.7c-1.9,0-3.4-1.5-3.4-3.4S18.8,0,20.6,0S24,1.5,24,3.4S22.5,6.7,20.6,6.7z M20.6,1.5c-1,0-1.9,0.8-1.9,1.9
+                                                            s0.8,1.9,1.9,1.9s1.9-0.8,1.9-1.9S21.7,1.5,20.6,1.5z"/>
+                                                    </g>
+                                                    <g id="Oval_14">
+                                                        <path d="M12,6.7c-1.9,0-3.4-1.5-3.4-3.4S10.1,0,12,0s3.4,1.5,3.4,3.4S13.9,6.7,12,6.7z M12,1.5c-1,0-1.9,0.8-1.9,1.9
+                                                            S11,5.2,12,5.2s1.9-0.8,1.9-1.9S13,1.5,12,1.5z"/>
+                                                    </g>
+                                                </g>
+                                            </g>
+                                        </g>
+                                        </svg>
+                                    ul.wireframe-options__list(data-drop)
+                                        li
+                                            a(href="javascript:;" data-del-sec).red Delete section
+                            textarea(placeholder="Type your text").post-constructor__textarea.post-constructor__textarea_i.post-constructor__textarea_i
+
+                    .wireframe.wireframe_draggable
+                        +add-cont
+                        .wireframe__cont
+                            .wireframe__top
+                                button.wireframe__btn(data-tooltip="Move up" data-wireframe-up).
+                                    <svg version="1.1" id="Icons" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                         viewBox="0 0 25.5 13.9" style="enable-background:new 0 0 25.5 13.9;" xml:space="preserve">
+                                    <g id="Arrows-Diagrams__x2F__Arrows__x2F__arrow-up-1">
+                                        <g id="Group_128">
+                                            <g id="Regular_128">
+                                                <g id="Shape_351">
+                                                    <path d="M24,13.9c-0.4,0-0.8-0.1-1.1-0.4L12.8,3.3L2.6,13.5c-0.6,0.6-1.5,0.6-2.1,0s-0.6-1.5,0-2.1L11.2,0.7
+                                                        c0.8-0.8,2.3-0.8,3.2,0l10.7,10.7c0.6,0.6,0.6,1.5,0,2.1C24.8,13.8,24.4,13.9,24,13.9z"/>
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </g>
+                                    </svg>
+                                button.wireframe__btn(data-tooltip="Move down" data-wireframe-down).
+                                    <svg version="1.1" id="Icons" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                         viewBox="0 0 25.5 13.9" style="enable-background:new 0 0 25.5 13.9;" xml:space="preserve">
+                                    <g id="Arrows-Diagrams__x2F__Arrows__x2F__arrow-down-1">
+                                        <g id="Group_51">
+                                            <g id="Regular_51">
+                                                <g id="Shape_225">
+                                                    <path d="M12.8,13.9c-0.6,0-1.2-0.2-1.6-0.7L0.4,2.6C-0.1,2-0.1,1,0.4,0.4C1-0.1,2-0.1,2.6,0.4l10.2,10.2L22.9,0.4
+                                                        c0.6-0.6,1.5-0.6,2.1,0c0.6,0.6,0.6,1.5,0,2.1L14.3,13.3C13.9,13.7,13.3,13.9,12.8,13.9z M12.2,11.2
+                                                        C12.2,11.2,12.2,11.2,12.2,11.2L12.2,11.2z M13.3,11.2L13.3,11.2C13.3,11.2,13.3,11.2,13.3,11.2z"/>
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </g>
+                                    </svg>
+                                .wireframe-options
+                                    button.wireframe__btn(data-tooltip="Options" data-drop-trig).
+                                        <svg version="1.1" id="Icons" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                             viewBox="0 0 24 6.8" style="enable-background:new 0 0 24 6.8;" xml:space="preserve">
+                                        <g id="Interface-Essential__x2F__Menu__x2F__navigation-menu-horizontal">
+                                            <g id="Group_27">
+                                                <g id="navigation-menu-horizontal">
+                                                    <g id="Oval_12">
+                                                        <path d="M3.4,6.7C1.5,6.7,0,5.2,0,3.4S1.5,0,3.4,0s3.4,1.5,3.4,3.4S5.2,6.7,3.4,6.7z M3.4,1.5c-1,0-1.9,0.8-1.9,1.9
+                                                            s0.8,1.9,1.9,1.9s1.9-0.8,1.9-1.9S4.4,1.5,3.4,1.5z"/>
+                                                    </g>
+                                                    <g id="Oval_13">
+                                                        <path d="M20.6,6.7c-1.9,0-3.4-1.5-3.4-3.4S18.8,0,20.6,0S24,1.5,24,3.4S22.5,6.7,20.6,6.7z M20.6,1.5c-1,0-1.9,0.8-1.9,1.9
+                                                            s0.8,1.9,1.9,1.9s1.9-0.8,1.9-1.9S21.7,1.5,20.6,1.5z"/>
+                                                    </g>
+                                                    <g id="Oval_14">
+                                                        <path d="M12,6.7c-1.9,0-3.4-1.5-3.4-3.4S10.1,0,12,0s3.4,1.5,3.4,3.4S13.9,6.7,12,6.7z M12,1.5c-1,0-1.9,0.8-1.9,1.9
+                                                            S11,5.2,12,5.2s1.9-0.8,1.9-1.9S13,1.5,12,1.5z"/>
+                                                    </g>
+                                                </g>
+                                            </g>
+                                        </g>
+                                        </svg>
+                                    ul.wireframe-options__list(data-drop)
+                                        li
+                                            a(href="javascript:;" data-add-photo-caption) Add caption
+                                            a(href="javascript:;" data-rm-photo-caption).hidden Remove caption
+                                        li
+                                            a(href="javascript:;" data-change-photo) Change photo
+                                        li
+                                            a(href="javascript:;" data-del-sec).red Delete section
+                            label.btn-add-file.btn-add-file_lg
+                                input(type='file' data-img-upload).btn-add-file__input.hidden
+                                .btn-add-file__preview.hidden
+                                    img(src="#" alt="image")
+                                .btn-add-file__cont
+                                    img(src="assets/img/icons/plus-40.png" alt="plus")
+                                    span.btn-add-file__title Add journal photo
+                                    span.btn-add-file__desc Min 700 x 500 px
+                                    a(href="#").btn-add-file__link Or Choose From Library
+                            textarea(placeholder="Caption").post-constructor__textarea.post-constructor__textarea_i.post-constructor__textarea_author.hidden
+
+                    .wireframe.wireframe_not-dragg
+                        +add-cont

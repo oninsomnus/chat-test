@@ -1,0 +1,260 @@
+.settings-menu {
+
+	.settings-menu-title {
+		border-bottom: 1px solid $border;
+		padding-bottom: 20px;
+		margin-bottom: 20px;
+
+		span {
+			font-size: 16px;
+			line-height: 16px;
+			font-weight: 500;
+			color: $text;
+		}
+	}
+	.settings-menu-list {
+		list-style-type: none;
+		padding: 0px;
+		margin: 0px;
+
+		li {
+
+			.settings-menu-list-item {
+				color: $text-light;
+				cursor: pointer;
+				display: inline-block;
+				margin-bottom: 15px;
+
+				span {
+					font-size: 16px;
+					line-height: 16px;
+					font-weight: 500;
+				}
+				&.active, &:hover {
+					color: $primary;
+				}
+			}
+			&:last-child {
+
+				.settings-menu-list-item {
+					margin-bottom: 0px;
+				}
+			}
+		}
+	}
+}
+.settings-tabs {
+	margin-bottom: 100px;
+
+	.settings-tab {
+		display: none;
+
+		.settings-tab-title {
+			border-bottom: 1px solid $border;
+			padding-bottom: 20px;
+			margin-bottom: 20px;
+
+			span {
+				font-size: 16px;
+				line-height: 16px;
+				font-weight: 500;
+				text-transform: uppercase;
+				color: $text;
+			}
+		}
+		.form-control {
+			margin-bottom: 20px;
+
+			label {
+				display: block;
+				font-size: 16px;
+				line-height: 16px;
+				font-weight: 500;
+				color: $text;
+				margin-bottom: 10px;
+			}
+			&-input {
+
+				input {
+					width: calc(100% - 20px);
+					border: 1px solid $border;
+					outline: none;
+					border-radius: 4px;
+					padding: 10px;
+					@include transition(0.3s, ease);
+
+					&:focus {
+						border: 1px solid $text-light;
+					}
+				}
+			}
+			&-birthday {
+
+				select {
+					border: 1px solid $border;
+					outline: none;
+					border-radius: 4px;
+					padding: 10px;
+					margin-right: 5px;
+					@include transition(0.3s, ease);
+
+					&.birth-day, &.birth-year {
+						width: 100px;
+					}
+					&.birth-month {
+						width: 150px;
+					}
+				}
+			}
+			&-location {
+				input {
+					width: 345px;
+					border: 1px solid $border;
+					outline: none;
+					border-radius: 4px;
+					padding: 10px;
+					@include transition(0.3s, ease);
+
+					&:focus {
+						border: 1px solid $text-light;
+					}
+				}
+			}
+			&-tfa {
+
+				.tfa-qr-code, .tfa-divider, .tfa-input {
+					display: inline-block;
+					float: left;
+				}
+				.tfa-qr-code {
+					height: 100px;
+					width: 100px;
+					background-size: cover;
+					background-position: center;
+				}
+				.tfa-divider {
+					height: 1px;
+					background-color: $border;
+					width: 100px;
+					margin: 0px 10px;
+					margin-top: 50px;
+				}
+				.tfa-input {
+					margin-top: 6px;
+
+					input {
+						width: 358px;
+						border: 1px solid $border;
+						outline: none;
+						border-radius: 4px;
+						padding: 10px;
+						@include transition(0.3s, ease);
+
+						&:focus {
+							border: 1px solid $text-light;
+						}
+					}
+				}
+			}
+			&-suspend, &-delete {
+
+				span {
+					display: block;
+					font-size: 14px;
+					color: $text-light;
+					margin-bottom: 10px;
+				}
+				.suspend-account-button, .delete-account-button {
+					cursor: pointer;
+					display: inline-block;
+
+					span {
+						font-size: 16px;
+						line-height: 16px;
+						font-weight: 500;
+						color: $link;
+					}
+				}
+			}
+			&-switch {
+
+				.switch-label {
+					padding: 11px 0px;
+					display: inline-block;
+				}
+			}
+			.switch-wrapper {
+				display: inline-block;
+				float: right;
+
+				span {
+					display: inline-block;
+					float: right;
+					padding: 9px 0px;
+					padding-right: 10px;
+					color: $text-light;
+				}
+				.switch {
+					margin: 9px 0px;
+					float: right;
+					color: $text-light;
+					position: relative;
+					display: inline-block;
+					width: 40px;
+					height: 20px;
+
+					input {
+						display:none;
+
+						&:checked + .slider {
+						  background-color: $secondary;
+						}
+
+						&:focus + .slider {
+						  box-shadow: 0 0 1px $secondary;
+						}
+
+						&:checked + .slider:before {
+						  -webkit-transform: translateX(20px);
+						  -ms-transform: translateX(20px);
+						  transform: translateX(20px);
+						}
+					}
+					.slider {
+						position: absolute;
+						cursor: pointer;
+						top: 0;
+						left: 0;
+						right: 0;
+						bottom: 0;
+						background-color: #ccc;
+						-webkit-transition: .4s;
+						transition: .4s;
+
+						&:before {
+							position: absolute;
+							content: "";
+							height: 14px;
+							width: 14px;
+							left: 3px;
+							bottom: 3px;
+							background-color: white;
+							-webkit-transition: .4s;
+							transition: .4s;
+						}
+						&.round {
+							border-radius: 34px;
+
+							&:before {
+  								border-radius: 50%;
+							}
+						}
+					}
+				}
+			}
+		}
+		&.active {
+			display: block;
+		}
+	}
+}

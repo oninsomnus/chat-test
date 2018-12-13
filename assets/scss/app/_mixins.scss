@@ -1,0 +1,60 @@
+//Mixins
+@mixin transition($time, $easing) {
+	-webkit-transition: all $time $easing;
+	-moz-transition: all $time $easing;
+	-ms-transition: all $time $easing;
+	-o-transition: all $time $easing;
+	transition: all $time $easing;
+}
+@mixin transform($transform) {
+	-webkit-transform: $transform;
+	-moz-transform: $transform;
+	-ms-transform: $transform;
+	-o-transform: $transform;
+	transform: $transform;
+}
+@mixin select($variable) {
+  -webkit-touch-callout: $variable;
+    -webkit-user-select: $variable;
+     -khtml-user-select: $variable;
+       -moz-user-select: $variable;
+        -ms-user-select: $variable;
+            user-select: $variable;
+	
+}
+@mixin after-before{
+    display: block;
+    content:"";
+}
+.noselect {
+}
+
+.nopadding {
+	padding-left: 0px;
+	padding-right: 0px;
+}
+.float-right {
+	float: right;
+}
+.float-left {
+	float: left;
+}
+.clearfix:after {
+   	content: " ";
+   	visibility: hidden;
+   	display: block;
+   	height: 0;
+   	clear: both;
+}
+.hide {
+	display: none;
+}
+@-moz-keyframes spin {
+    to { -moz-transform: rotate(360deg); }
+}
+@-webkit-keyframes spin {
+    to { -webkit-transform: rotate(360deg); }
+}
+@keyframes spin {
+    to {transform:rotate(360deg);}
+}

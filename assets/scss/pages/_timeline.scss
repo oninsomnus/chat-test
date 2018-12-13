@@ -1,0 +1,17 @@
+.sidebar-right{
+    &::-webkit-scrollbar {
+			    width: 5px;
+			}
+			&::-webkit-scrollbar-track {
+			    border-radius: 10px;
+			    background-color: $floating-chat-border;
+			}
+			&::-webkit-scrollbar-thumb {
+			    background: $red2; 
+			    border-radius: 10px;
+			}
+			&::-webkit-scrollbar-thumb:hover {
+			    background:$red2;
+			    margin-right: 10px;
+			}
+}

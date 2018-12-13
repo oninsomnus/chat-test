@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>bmy.guide - Timeline</title>
+
+        <link href="assets/css/app.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="assets/css/slick.css"/>
+
+        <script src="assets/js/jquery-3.3.1.min.js"></script>
+        <script type="text/javascript" src="assets/js/slick.min.js"></script>
+
+
+    </head>
+    <body class="web chat-alternative">
+
+        <div class="floating-chat">
+            <div class="floating-chat-toggle">
+                <div class="floating-chat-toggle-open">
+                    <i class="icon-chat"></i>
+                </div>
+                <div class="floating-chat-toggle-close">
+                    <i class="icon-remove"></i>
+                </div>
+            </div>
+            <div class="floating-chat-box">
+                <div class="floating-chat-box-header">
+
+                    <!-- Header for the list of people -->
+                    <div class="floating-header-box-header-list">
+                        <div class="floating-header-box-header-list-title">
+                            <span>People</span>
+                        </div>
+                        <div class="floating-header-invisible">
+                            <img src="assets/img/icons/icon-unseen.png" alt=""/>
+                           
+                        </div>
+                        <div class="floating-header-mute">
+                            <img src="assets/img/icons/icon-mute.png" alt=""/>
+                        </div>
+                        <div class="floating-header-box-header-list-actions">
+                            <div class="floating-header-box-header-list-action floating-header-box-header-list-action-people floating-header-box-header-list-action-toggle active" data-type="people">
+                                <i class="icon-chat-page-people"></i>
+                                <span class="counter counter-people">5</span>
+                            </div>
+                            <div class="floating-header-box-header-list-action floating-header-box-header-list-action-groups floating-header-box-header-list-action-toggle" data-type="groups">
+                                <i class="icon-chat-page-groups"></i>
+                                 <span class="counter counter-groups">12</span>
+                            </div>
+                            <div class="floating-header-box-header-list-action floating-header-box-header-list-action-settings">
+                                <i class="icon-chat-page-options"></i>
+                            </div>
+                            <div class="dropdown dropdown-chat-settings">
+                                <ul>
+                                    <li>
+                                        <a href="#" class="dropdown-action offline-status"><span>Go offline</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="dropdown-action mute-status"><span>Mute chat</span></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Header for the chat -->
+                    <div class="floating-header-box-header-conversation">
+
+                        <div class="floating-header-box-header-conversation-actions-left">
+                            <div class="floating-header-box-header-conversation-action-back">
+                                <i class="icon-arrow-left"></i>
+                            </div>
+                        </div>
+                        <div class="floating-header-box-header-conversation-user" style="background-image: url('assets/img/profile.png')"></div>
+                        <div class="floating-header-box-header-conversation-details">
+                            <div class="floating-header-box-header-conversation-details-name">
+                                <span>Carla</span>
+                            </div>
+                            <!-- If the user is online just add "online" class to the next div -->
+                            <div class="floating-header-box-header-conversation-details-active">
+                                <span>Active 1h ago</span>
+                            </div>
+                        </div>
+                        <div class="floating-header-box-header-conversation-actions">
+                            <div class="floating-header-box-header-conversation-action floating-header-box-header-conversation-action-settings">
+                                <i class="icon-settings-cog"></i>
+                            </div>
+                            <div class="dropdown dropdown-conversation-settings">
+                                <ul>
+                                    <li>
+                                        <a href="#" class="dropdown-action"><span>Mute</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="dropdown-action"><span>Block</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="dropdown-action"><span>Report</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="dropdown-action"><span>Settings</span></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="floating-chat-box-content">
+
+                    <!-- Content for the list of people -->
+                    <div class="floating-chat-box-content-list active" data-type="people">
+
+                        <div class="floating-chat-box-content-list-element clearfix">
+                            <div class="floating-chat-box-content-list-element-user" style="background-image: url('assets/img/profile.png')">
+                                <div class="floating-chat-box-content-list-element-user-online"></div>
+                            </div>
+                            <div class="floating-chat-box-content-list-element-details">
+                                <div class="floating-chat-box-content-list-element-details-name">
+                                    <span>Carla</span>
+                                </div>
+                                <div class="floating-chat-box-content-list-element-details-last-message">
+                                    <span>15m</span>
+                                </div>
+                                <div class="floating-chat-box-content-list-element-details-last-message-date">
+                                    <span>1d</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="floating-chat-box-content-list-element clearfix">
+                            <div class="floating-chat-box-content-list-element-user" style="background-image: url('assets/img/profile.png')">
+                                <div class="floating-chat-box-content-list-element-user-online"></div>
+                            </div>
+                            <div class="floating-chat-box-content-list-element-details">
+                                <div class="floating-chat-box-content-list-element-details-name">
+                                    <span>Lydia Whitmore</span>
+                                </div>
+                                <div class="floating-chat-box-content-list-element-details-last-message">
+                                    <span>1h</span>
+                                </div>
+                                <div class="floating-chat-box-content-list-element-details-last-message-date">
+                                    <span>1d</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="floating-chat-box-content-list-element online clearfix">
+                            <div class="floating-chat-box-content-list-element-user" style="background-image: url('assets/img/profile.png')">
+                                <div class="floating-chat-box-content-list-element-user-online"></div>
+                            </div>
+                            <div class="floating-chat-box-content-list-element-details">
+                                <div class="floating-chat-box-content-list-element-details-name">
+                                    <span>Shantelle Comptoon Shantelle</span>
+                                </div>
+                                <div class="floating-chat-box-content-list-element-details-last-message">
+                                    <span>Where you at these days? Where you at these days?</span>
+                                </div>
+                                <div class="floating-chat-box-content-list-element-details-messages-count">
+                                    <span>5</span>
+                                </div>
+                                <div class="floating-chat-box-content-list-element-details-last-message-date">
+                                    <span>1d</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="floating-chat-box-content-list-element clearfix">
+                            <div class="floating-chat-box-content-list-element-user" style="background-image: url('assets/img/profile.png')">
+                                <div class="floating-chat-box-content-list-element-user-online"></div>
+                            </div>
+                            <div class="floating-chat-box-content-list-element-details">
+                                <div class="floating-chat-box-content-list-element-details-name">
+                                    <span>Carla</span>
+                                </div>
+                                <div class="floating-chat-box-content-list-element-details-last-message">
+                                    <span>15m</span>
+                                </div>
+                                <div class="floating-chat-box-content-list-element-details-messages-count">
+                                    <span>9+</span>
+                                </div>
+                                <div class="floating-chat-box-content-list-element-details-last-message-date">
+                                    <span>1d</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="floating-chat-box-content-list-element clearfix">
+                            <div class="floating-chat-box-content-list-element-user" style="background-image: url('assets/img/profile.png')">
+                                <div class="floating-chat-box-content-list-element-user-online"></div>
+                            </div>
+                            <div class="floating-chat-box-content-list-element-details">
+                                <div class="floating-chat-box-content-list-element-details-name">
+                                    <span>Lydia Whitmore</span>
+                                </div>
+                                <div class="floating-chat-box-content-list-element-details-last-message">
+                                    <span>1h</span>
+                                </div>
+                                <div class="floating-chat-box-content-list-element-details-last-message-date">
+                                    <span>1d</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="floating-chat-box-content-list-element clearfix">
+                            <div class="floating-chat-box-content-list-element-user" style="background-image: url('assets/img/profile.png')">
+                                <div class="floating-chat-box-content-list-element-user-online"></div>
+                            </div>
+                            <div class="floating-chat-box-content-list-element-details">
+                                <div class="floating-chat-box-content-list-element-details-name">
+                                    <span>Shantelle Comptoon</span>
+                                </div>
+                                <div class="floating-chat-box-content-list-element-details-last-message online">
+                                    <span>online</span>
+                                </div>
+                                <div class="floating-chat-box-content-list-element-details-last-message-date">
+                                    <span>1d</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="floating-chat-box-content-list" data-type="groups">
+                        <div class="floating-chat-box-content-list-element clearfix">
+                            <div class="floating-chat-box-content-list-element-user" style="background-image: url('assets/img/create_group.jpg')">
+                                <div class="floating-chat-box-content-list-element-user-online"></div>
+                            </div>
+                            <div class="floating-chat-box-content-list-element-details">
+                                <div class="floating-chat-box-content-list-element-create-group">
+                                    <span>Create Group</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="floating-chat-box-content-list-element clearfix">
+                            <div class="floating-chat-box-content-list-element-user" style="background-image: url('assets/img/profile.png')">
+                                <div class="floating-chat-box-content-list-element-user-online"></div>
+                            </div>
+                            <div class="floating-chat-box-content-list-element-details">
+                                <div class="floating-chat-box-content-list-element-details-name">
+                                    <span>Lydia Whitmore</span>
+                                </div>
+                                <div class="floating-chat-box-content-list-element-details-last-message">
+                                    <span>1h</span>
+                                </div>
+                                <div class="floating-chat-box-content-list-element-details-last-message-date">
+                                    <span>1d</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="floating-chat-box-content-list-element online clearfix">
+                            <div class="floating-chat-box-content-list-element-user" style="background-image: url('assets/img/profile.png')">
+                                <div class="floating-chat-box-content-list-element-user-online"></div>
+                            </div>
+                            <div class="floating-chat-box-content-list-element-details">
+                                <div class="floating-chat-box-content-list-element-details-name">
+                                    <span>Shantelle Comptoon Shantelle</span>
+                                </div>
+                                <div class="floating-chat-box-content-list-element-details-last-message">
+                                    <span>Where you at these days? Where you at these days?</span>
+                                </div>
+                                <div class="floating-chat-box-content-list-element-details-messages-count">
+                                    <span>5</span>
+                                </div>
+                                <div class="floating-chat-box-content-list-element-details-last-message-date">
+                                    <span>1d</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="floating-chat-box-content-list-element clearfix">
+                            <div class="floating-chat-box-content-list-element-user" style="background-image: url('assets/img/profile.png')">
+                                <div class="floating-chat-box-content-list-element-user-online"></div>
+                            </div>
+                            <div class="floating-chat-box-content-list-element-details">
+                                <div class="floating-chat-box-content-list-element-details-name">
+                                    <span>Carla</span>
+                                </div>
+                                <div class="floating-chat-box-content-list-element-details-last-message">
+                                    <span>15m</span>
+                                </div>
+                                <div class="floating-chat-box-content-list-element-details-messages-count">
+                                    <span>9+</span>
+                                </div>
+                                <div class="floating-chat-box-content-list-element-details-last-message-date">
+                                    <span>1d</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="floating-chat-box-content-list-element clearfix">
+                            <div class="floating-chat-box-content-list-element-user" style="background-image: url('assets/img/profile.png')">
+                                <div class="floating-chat-box-content-list-element-user-online"></div>
+                            </div>
+                            <div class="floating-chat-box-content-list-element-details">
+                                <div class="floating-chat-box-content-list-element-details-name">
+                                    <span>Lydia Whitmore</span>
+                                </div>
+                                <div class="floating-chat-box-content-list-element-details-last-message">
+                                    <span>1h</span>
+                                </div>
+                                <div class="floating-chat-box-content-list-element-details-last-message-date">
+                                    <span>1d</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="floating-chat-box-content-list-element clearfix">
+                            <div class="floating-chat-box-content-list-element-user" style="background-image: url('assets/img/profile.png')">
+                                <div class="floating-chat-box-content-list-element-user-online"></div>
+                            </div>
+                            <div class="floating-chat-box-content-list-element-details">
+                                <div class="floating-chat-box-content-list-element-details-name">
+                                    <span>Shantelle Comptoon</span>
+                                </div>
+                                <div class="floating-chat-box-content-list-element-details-last-message online">
+                                    <span>online</span>
+                                </div>
+                                <div class="floating-chat-box-content-list-element-details-last-message-date">
+                                    <span>1d</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Content for the conversation -->
+                    <div class="floating-chat-box-content-conversation">
+
+
+                        <div class="floating-chat-box-content-conversation-element floating-chat-box-content-conversation-element-left clearfix">
+                            <div class="floating-chat-box-content-conversation-element-user" style="background-image: url('assets/img/profile.png')"></div>
+                            <div class="floating-chat-box-content-conversation-element-message">
+                                <span class="edit-message-icon">
+                                    <i class="icon-chat-full-options"></i>
+                                </span>
+                                <span><a href="#">Carla</a> Lorem ipsum dolor vestibulum malesuada lacus sit amet facitlisis varius. Cras congue sagittis.</span>
+                                <a href="#" class="reply-message">Reply</a>
+                            </div>
+                            <div class="floating-chat-box-content-conversation-element-date">
+                                <span>25m</span>
+                                <span class="seen">
+                                    <i class="icon-chat-seen"></i>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="floating-chat-box-content-conversation-element floating-chat-box-content-conversation-element-right edited-message clearfix">
+                            <div class="floating-chat-box-content-conversation-element-message readed-message">
+                                <span>Wow <a href="#">Carla</a> you speak fluent latin? How did you do it?</span>
+                            </div>
+                            <div class="floating-chat-box-content-conversation-element-date">
+                                <span class="edited">Edited</span>
+                                <span class="seen">
+                                    <img src="assets/img/readed.png" alt=""/>
+                                </span>
+                                <span>25m</span>
+
+                            </div>
+                        </div>
+
+                        <div class="floating-chat-box-content-conversation-element floating-chat-box-content-conversation-element-left clearfix">
+                            <div class="floating-chat-box-content-conversation-element-user" style="background-image: url('assets/img/profile.png')"></div>
+                            <div class="floating-chat-box-content-conversation-element-message">
+                                <div class="adimg">
+                                    <img src="assets/img/images/adimg_03.jpg" alt="">
+                                </div>
+                                <div class="adtexts">
+                                    <span class="edit-message-icon">
+                                        <i class="icon-chat-full-options"></i>
+                                    </span>
+                                    <span class="moneybold">Send money online...</span>
+                                        <span class="moneyadlight">Lorem ipsum dolor sit...
+                                        </span>
+                                    <a href="#" class="ad-reply-message">www.westernunion.com</a>
+                                </div>
+                            </div>
+                            <div class="floating-chat-box-content-conversation-element-date">
+                                <span>25m</span>
+                                <span class="seen">
+                                    <i class="icon-chat-seen"></i>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="floating-chat-box-content-conversation-element floating-chat-box-content-conversation-element-right replyed-element clearfix">
+                            
+                            <div class="floating-chat-box-content-conversation-element-message readed-message">
+                                <div class="adimg">
+                                    <img src="assets/img/images/adimg_03.jpg" alt="">
+                                </div>
+                                <div class="adtexts">
+                                    <span class="edit-message-icon">
+                                        <i class="icon-chat-full-options"></i>
+                                    </span>
+                                    <span class="moneybold">Send money online...</span>
+                                        <span class="moneyadlight">Lorem ipsum dolor sit...
+                                        </span>
+                                    <a href="#" class="ad-reply-message">www.westernunion.com</a>
+                                </div>
+                            </div>
+                            <div class="floating-chat-box-content-conversation-element-date">
+                                <span class="edited">Edited</span>
+                                <span class="seen">
+                                    <img src="assets/img/readed.png" alt=""/>
+                                </span>
+                                <span>25m</span>
+
+                            </div>
+                        </div>
+
+
+
+                    </div>
+
+                </div>
+                <div class="floating-chat-box-footer">
+                    <!-- Footer for the list of people -->
+                    <div class="floating-chat-box-footer-list">
+                        <div class="floating-chat-box-footer-list-search">
+                            <i class="icon-search"></i>
+                            <input type="text" placeholder="Search">
+
+                        </div>
+                    </div>
+                    <!-- Footer for the conversation -->
+                    <div class="floating-chat-box-footer-content">
+                        <div class="floating-chat-box-footer-content-message">
+                            <input type="text" placeholder="Write a reply" class="floating-chat-box-footer-content-message-input">
+                            <div class="floating-chat-box-footer-content-message-attachment">
+                                <i class="icon-chat-page-attachement"></i>
+                            </div>
+                            <div class="floating-chat-box-footer-content-message-emoji">
+                                <i class="icon-chat-page-emoji"></i>
+                            </div>
+                            <div class="floating-chat-box-footer-content-message-send">
+                                <i class="icon-chat-page-send"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="floating-chat-reply-message message-redact">
+                        <span class="close-reply">
+                            <i class="icon-chat-page-close"></i>
+                        </span>
+                        <span class="reply-icon">
+                            <img src="assets/img/reply.png" alt=""/>
+                        </span>
+                        <div class="replied-msg clearfix">
+                            <span class="user">Anna</span>
+                            <p>Lorem ipsum dolor vestibulum malesuada lacus sit amet facitlisis</p>
+                        </div>
+                    </div>
+                    <div class="floating-chat-edit-message message-redact">
+                        <span class="close-reply">
+                            <i class="icon-chat-page-close"></i>
+                        </span>
+                        <span class="reply-icon">
+                            <img src="assets/img/icons/edit-icon2.png" alt=""/>
+                        </span>
+                        <div class="replied-msg clearfix">
+                            <span class="user">Edit message</span>
+                            <p>Lorem ipsum dolor vestibulum malesuada lacus sit amet facitlisis</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <script type="text/javascript">
+            $(document).on('click', '.chat-list-toggle-element', function () {
+                var type = $(this).data('type');
+                $('.chat-list-toggle-element').removeClass('active');
+                $(this).addClass('active');
+                $('.chat-list-elements').removeClass('active');
+                $('.chat-list-elements[data-type="' + type + '"]').addClass('active');
+            });
+            $(document).on('click', '.chat-list-element', function () {
+                $('.chat-list-element').removeClass('active');
+                $(this).addClass('active');
+            });
+            $('.member-action-settings').on('click', function () {
+                $(this).next('.dropdown').toggleClass('active');
+                $(this).parent('.member-actions').toggleClass('active');
+            });
+            $('.offline-status').on('click', function () {
+                $('.floating-header-invisible').toggleClass('active');
+            });
+            $('.reply-message').on('click', function () {
+                $('.floating-chat-reply-message').addClass('active');
+            });
+            $('.icon-chat-page-close').on('click', function () {
+                $('.floating-chat-reply-message').removeClass('active');
+            });
+             $('.edit-message-icon').on('click', function () {
+                $('.floating-chat-edit-message').addClass('active');
+            });
+            $('.icon-chat-page-close').on('click', function () {
+                $('.floating-chat-edit-message').removeClass('active');
+            });
+            $('.mute-status').on('click', function () {
+                $('.floating-header-mute').toggleClass('active');
+            });
+            $(document).on('click', '.toast-close', function () {
+                var toast = $(this).parent('.toast');
+                $(toast).animate({opacity: 0}, 300).slideToggle(300);
+            });
+            $(document).on('click', '.post-content-journal-read', function () {
+                $('.post-popup-journal-wrapper').fadeIn(300);
+                $('body').attr('style', 'overflow: hidden');
+            });
+            $(document).on('click', '.post-popup-journal-wrapper', function () {
+                $('.post-popup-journal-wrapper').fadeOut(300);
+                $('body').attr('style', 'overflow: initial');
+                // setTimeout(function() {
+                // 	$('.post-popup-journal-wrapper').remove();
+                // }, 300);
+            });
+            $(document).on('click', '.post-popup-journal-wrapper .post-popup-journal-content-wrapper', function (e) {
+                e.stopPropagation();
+            });
+            $(document).on('click', '.post-content-photo-open', function () {
+                $('.post-popup-photo-wrapper').fadeIn(300);
+                $('body').attr('style', 'overflow: hidden');
+            });
+            $(document).on('click', '.post-popup-photo-wrapper', function () {
+                $('.post-popup-photo-wrapper').fadeOut(300);
+                $('body').attr('style', 'overflow: initial');
+                // setTimeout(function() {
+                // 	$('.post-popup-photo-wrapper').remove();
+                // }, 300);
+            });
+            $(document).on('click', '.post-popup-photo-wrapper .post-popup-photo-content-wrapper', function (e) {
+                e.stopPropagation();
+            });
+
+
+            $('.floating-chat-toggle').on('click', function () {
+                $(this).toggleClass('active');
+                $('.floating-chat-box').toggleClass('active');
+            });
+            $('.floating-header-box-header-list-action-close, .floating-header-box-header-conversation-action-close').on('click', function () {
+                $('.floating-chat-toggle').removeClass('active');
+                $('.floating-chat-box').removeClass('active');
+            });
+            $('.floating-chat-box-content-list-element').on('click', function () {
+                $('.floating-chat-box-footer-list').fadeOut(300);
+                $('.floating-chat-box-content-list').fadeOut(300);
+                $('.floating-header-box-header-list').fadeOut(300);
+                setTimeout(function () {
+
+                    $('.floating-chat-box-footer-content').fadeIn(300);
+                    $('.floating-chat-box-content-conversation').fadeIn(300);
+                    $('.floating-header-box-header-conversation').fadeIn(300);
+                }, 350);
+            });
+            $('.floating-header-box-header-conversation-action-back').on('click', function () {
+                $('.floating-chat-box-footer-content').fadeOut(300);
+                $('.floating-chat-box-content-conversation').fadeOut(300);
+                $('.floating-header-box-header-conversation').fadeOut(300);
+                setTimeout(function () {
+
+                    $('.floating-chat-box-footer-list').fadeIn(300);
+                    $('.floating-chat-box-content-list').fadeIn(300);
+                    $('.floating-header-box-header-list').fadeIn(300);
+                }, 350);
+            });
+
+            // Floating chat toggle people/groups list
+            window.chatListType = 'people';
+            $('.floating-chat-box-content-list[data-type="people"]').show();
+            $('.floating-header-box-header-list-action-toggle').on('click', function () {
+                var type = $(this).data('type');
+                if (type != chatListType) {
+                    window.chatListType = type;
+                    $('.floating-header-box-header-list-action-toggle').removeClass('active');
+                    $(this).addClass('active');
+                    $('.floating-chat-box-content-list').fadeOut(150);
+                    $('.floating-header-box-header-list-title').fadeOut(150);
+                    setTimeout(function () {
+                        $('.floating-header-box-header-list-title').children('span').html(type);
+                        $('.floating-header-box-header-list-title').fadeIn(150);
+                        $('.floating-chat-box-content-list[data-type="' + type + '"]').fadeIn(150);
+                    }, 150);
+                }
+            });
+
+            $('.post-media-gallery').slick({
+                arrows: true,
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                autoplay: false,
+                speed: 600,
+                prevArrow: '<div class="post-media-gallery-arrow-prev"><i class="fas fa-chevron-left"></i></div>',
+                nextArrow: '<div class="post-media-gallery-arrow-next"><i class="fas fa-chevron-right"></i></div>',
+            });
+
+            window.postFormActive = false;
+            $('#post_content').on('focus', function () {
+                $('.post-form-content').addClass('active');
+                postFormActive = true;
+            });
+            $('.post-form-content-emoji-toggle').on('click', function () {
+                if (postFormActive == false) {
+                    $('#post_content').focus();
+                }
+            });
+            $('.floating-header-box-header-conversation-action-settings, .floating-header-box-header-list-action-settings, .header-messages-toggle, .header-notifications-toggle, .post-form-emoji-toggle, .header-profile-toggle, .post-header-actions-toggle, .post-popup-photo-header-user-actions-toggle, .post-share-toggle').on('click', function () {
+                $(this).next('.dropdown').toggleClass('active');
+            });
+
+            $(document).mouseup(function (e)
+            {
+                var container = $(".dropdown.active");
+                // if the target of the click isn't the container nor a descendant of the container
+                if (!container.is(e.target) && container.has(e.target).length === 0)
+                {
+                    container.toggleClass('active');
+                }
+            });
+
+            var topLimit = $('.sidebar').offset().top;
+            $(window).scroll(function () {
+                if ((topLimit - 62) <= $(window).scrollTop()) {
+                    $('.sidebar').addClass('sticky-sidebar');
+                    $('.middle-content').addClass('sticky-sidebar');
+                } else {
+                    $('.sidebar').removeClass('sticky-sidebar');
+                    $('.middle-content').removeClass('sticky-sidebar');
+                }
+            })
+        </script>
+
+    </body>
+</html>

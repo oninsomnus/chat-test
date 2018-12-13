@@ -1,0 +1,104 @@
+.dropdown {
+    position: absolute;
+    top: 35px;
+    right: -20px;
+    width: 200px;
+    padding: 20px;
+    background-color: $white;
+    border: 1px solid $post-border;
+    border-radius: 10px;
+    pointer-events: none;
+    opacity: 0;
+    z-index: 999;
+    @include transform(translateY(-20px));
+    @include transition(0.3s, ease);
+    -webkit-box-shadow: 0px 10px 49px 7px rgba(41,43,52,0.11);
+    -moz-box-shadow: 0px 10px 49px 7px rgba(41,43,52,0.11);
+    box-shadow: 0px 10px 49px 7px rgba(41,43,52,0.11);
+    &:after{
+        @include after-before;
+        background:$white;
+        width:7px;
+        height:7px;
+        border-top:1px solid $chat-border;
+        border-left:1px solid $chat-border;
+        position: absolute;
+        top: -5px;
+        transform: rotateZ(45deg);
+        right: 23px;
+    }
+    ul {
+        list-style-type: none;
+        margin: 0px;
+        padding: 0px;
+
+        li {
+
+            .dropdown-action {
+                display: block;
+                color: $text;
+                font-size: 16px;
+                line-height: 16px;
+                text-decoration: none;
+                margin: 15px 0px;
+                cursor: pointer;
+                @include transition(0.3s, ease);
+
+                i {
+                    display: inline-block;
+                    margin-right: 5px;
+                    width: 23px;
+                    text-align: center;
+                }
+                &:hover {
+                    color: $primary;
+                }
+            }
+            .dropdown-action-divider {
+                height: 1px;
+                width: 100%;
+                background-color: $post-border;
+            }
+            &:first-child {
+
+                .dropdown-action {
+                    margin-top: 0px;
+                }
+            }
+            &:last-child {
+
+                .dropdown-action {
+                    margin-bottom: 0px;
+                }
+            }
+        }
+    }
+    &.active {
+        opacity: 1;
+        pointer-events: initial;
+        @include transform(translateY(0px));
+    }
+    &-post-actions {
+        width: 120px;
+    }
+    &-header-profile {
+        width: 160px;
+        top: 70px;
+    }
+    &-header-notifications, &-header-messages {
+        width: 370px;
+        top: 56px;
+    }
+    &-emoji {
+        width: 208px;
+        padding: 10px;
+
+        .emoji {
+            display: inline-block;
+            float: left;
+            padding: 10px;
+            cursor: pointer;
+
+        }
+    }
+}

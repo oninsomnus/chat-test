@@ -1,0 +1,52 @@
+body {
+	margin: 0px;
+	padding: 0px;
+	padding-top:62px;
+	font-family: 'Roboto', sans-serif;
+
+}
+.web {
+	min-width: 1100px;
+	margin: 0 auto;
+}
+
+.tooltip {
+    position: relative;
+
+	.tooltiptext {
+	    opacity: 0;
+	    pointer-events: none;
+	    width: 90px;
+		bottom: 130%;
+		left: 50%; 
+		margin-left: -45px;
+	    background-color:$dark;
+	    color: #fff;
+	    text-align: center;
+	    padding: 10px 0;
+	    border-radius: 6px;
+	    position: absolute;
+	    z-index: 1;
+	    font-size: 14px;
+	    line-height: 14px;
+	    @include transition(0.3s, ease);
+
+	    &:after {
+		    @include after-before;
+		    position: absolute;
+		    top: 100%;
+		    left: 50%;
+		    margin-left: -5px;
+		    border-width: 5px;
+		    border-style: solid;
+		    border-color:$dark transparent transparent transparent;
+		}
+	}
+	&:hover {
+
+		.tooltiptext {
+	    	opacity: 1;
+		}
+	}
+}
+

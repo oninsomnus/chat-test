@@ -1,0 +1,561 @@
+body.nightmode{
+    background:$nightmode;
+    overflow-x:hidden;
+    #header{
+        background-color:$nightmode-header;
+        border-bottom:$nightmode-header-border;
+        .header{
+            .logo{
+                height:32px;
+                margin-bottom: 9px;
+                margin-top: 14px;
+
+                .logo-default{
+                    display:none;
+                }
+                .logo-nightmode{
+                    display:block;
+                }
+            }
+            .search{
+                input{
+                    background:transparent;
+                    border:1px solid transparent;
+                    &::placeholder {
+                        color: $nightmode-input-placeholder;
+                        opacity: 1;
+                    }
+                    &:-ms-input-placeholder {
+                        color: $nightmode-input-placeholder;
+                    }
+
+                    &::-ms-input-placeholder {
+                        color: $nightmode-input-placeholder;
+                    }
+                }
+                .input-icon{
+                    color:$nightmode-input-icon;
+                }
+            }
+            .header-right{
+                .header-messages, .header-notifications{
+                    .header-messages-toggle, .header-notifications-toggle{
+                        color:$nightmode-header-icon;
+                        &:before {
+                            border: 2px solid $nightmode-header;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .sidebar{
+        .sidebar-profile-name {
+            color:$nightmode-sidebar-name;
+        }
+        .sidebar-profile-alias{
+            color:$nightmode-sidebar-alias;
+        }
+        .sidebar-user-stats {
+            .sidebar-user-stats-element{
+                .sidebar-user-stats-element-title{
+                    color:$nightmode-text-light;
+                }
+            }
+        }
+        .sidebar-menu{
+            ul{
+                li{
+                    .sidebar-menu-element{
+                        color:$nightmode-text-light;
+                        &:hover{
+                            color:$white;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .sidebar-right{
+        .sidebar-trending{
+            .sidebar-trending-title{
+                span{
+                    color:$nightmode-text-light3;
+                }
+            }
+            .sidebar-trending-elements{
+                .sidebar-trending-element-title{
+                    span{
+                        color:$nightmode-text;
+                    }
+                }
+                .sidebar-trending-element-location{
+                    span{
+                        color:$nightmode-sidebar-alias;
+                    } 
+                }
+            }
+        }
+
+    }
+    .posts{
+        .post{
+            background-color: $nightmode-header;
+            border: 1px solid $nightmode-post-border;
+            .post-header{
+                .post-header-details{
+                    .post-header-details-author-name{
+                        color:$nightmode-text;
+                    }
+                    .post-header-details-author{
+                        a{
+                            color:$nightmode-text;  
+                        }
+                    }
+                }
+                .post-header-actions{
+                    .post-header-actions-toggle{
+                        color:$nightmode-header-icon;
+                    }
+                }
+            }
+            .post-content{
+                .post-content-title{
+                    color:$nightmode-text2;
+                }
+                .post-content-text{
+                    color:$nightmode-text-light2;
+                }
+                .post-content-location{
+                    .post-content-location-place{
+                        a{
+                            color:$nightmode-text-light2;
+                        }
+                    }
+                }
+            }
+            .post-footer{
+                &:before{
+                    background:$nightmode-border;
+                }
+            }
+            .post-comments{
+                .post-comments-list{
+                    .post-comment{
+                        .post-comment-text{
+                            .post-comment-text-wrapper{
+                                color:$post-content-text; 
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .posts .post .post-footer .post-share .post-share-toggle span, .posts .post .post-footer .post-share .post-comment-toggle span, .posts .post .post-footer .post-share .post-like-toggle span, .posts .post .post-footer .post-comment .post-share-toggle span, .posts .post .post-footer .post-comment .post-comment-toggle span, .posts .post .post-footer .post-comment .post-like-toggle span, .posts .post .post-footer .post-like .post-share-toggle span, .posts .post .post-footer .post-like .post-comment-toggle span, .posts .post .post-footer .post-like .post-like-toggle span {
+        color:$nightmode-text3;
+
+    }
+    .posts .post .post-footer .post-share .post-share-toggle i, .posts .post .post-footer .post-share .post-comment-toggle i, .posts .post .post-footer .post-share .post-like-toggle i, .posts .post .post-footer .post-comment .post-share-toggle i, .posts .post .post-footer .post-comment .post-comment-toggle i, .posts .post .post-footer .post-comment .post-like-toggle i, .posts .post .post-footer .post-like .post-share-toggle i, .posts .post .post-footer .post-like .post-comment-toggle i, .posts .post .post-footer .post-like .post-like-toggle i{
+        color:$nightmode-text3; 
+    }
+    .posts .post .post-content .post-content-details {
+        color:$nightmode-text-light2;
+    }
+    .chat-wrapper{
+        .chat-left{
+            border-right: 1px solid $nightmode-post-border;
+            background:$nightmode-chat-content;
+            .chat-header{
+                background: rgb(250,143,50);
+                background: -moz-linear-gradient(330deg, rgba(250,143,50,1) 0%, rgba(242,61,103,1) 100%);
+                background: -webkit-linear-gradient(330deg, rgba(250,143,50,1) 0%, rgba(242,61,103,1) 100%);
+                background: linear-gradient(330deg, rgba(250,143,50,1) 0%, rgba(242,61,103,1) 100%);
+                filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#fa8f32",endColorstr="#f23d67",GradientType=1);
+                border-bottom:1px solid transparent;
+                color:$white;
+                &-back{
+                    &-button{
+                        a{
+                            i{
+                                color:$white;
+                            }
+                            span{
+                                color:$white;
+                            }
+                        }
+                    }
+                }
+                &-content{
+                    &-name{
+                        span{
+                            color:$white;
+                        }
+                    }
+                    &-settings{
+                        i{
+                            color:$white;
+                        }
+                    }
+                }
+            }
+            .chat-content{
+                background: $nightmode-chat-content;
+                .chat-messages-wrapper{
+                    .chat-messages{
+                        .chat-message-left{
+                            .chat-message-content{
+                                .chat-message-bubble{
+                                    background-color: $nightmode-chat-message;
+                                    border: 1px solid $nightmode-chat-message-border;
+                                    span{
+                                        color:$post-content-text;
+                                    }
+                                }
+                            }
+                        }
+                        .chat-message{
+                            &-content{
+                                .chat-message-status{
+                                    .chat-message-date{
+                                        color:$post-content-text;
+                                    }
+                                    .chat-message-seen{
+                                        i{
+                                            color:$post-content-text;  
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .chat-content-box{
+                    .chat-content-box-input{
+                        input{
+                            background-color:$nightmode-chat-input;
+                            border:1px solid $nightmode-post-border;
+                            box-shadow: none;
+                            color:$nightmode-text;
+                            &::placeholder {
+                                color:$nightmode-text;
+                                opacity: 1;
+                            }
+
+                            &:-ms-input-placeholder {
+                                color: $nightmode-text;
+                            }
+
+                            &::-ms-input-placeholder {
+                                color: $nightmode-text;
+                            }
+                        }
+                        .chat-content-box-input-attachment{
+                            i{
+                                color:$post-content-text; 
+                            }
+                        }
+                        .chat-content-box-input-emoji{
+                            i{
+                                color:$post-content-text; 
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .chat-right{
+            background:$nightmode-chat-right;
+            .chat-search{
+                i{
+                    color:$nightmode-text-light3;  
+                }
+                input{
+                    background-color:$nightmode-chat-input;
+                    border:1px solid $nightmode-post-border;
+                    box-shadow: none;
+                    color:$nightmode-text-light3;
+                    &::placeholder {
+                        color:$nightmode-text-light3;
+                        opacity: 1;
+                    }
+
+                    &:-ms-input-placeholder {
+                        color:$nightmode-text-light3;
+                    }
+
+                    &::-ms-input-placeholder {
+                        color:$nightmode-text-light3;
+                    }
+                }
+            }
+            .chat-list{
+                &-header{
+                    &:after{
+                        background:$nightmode-post-border;
+                    }
+                    .chat-list-toggle{
+                        .chat-list-toggle-element{
+                            color:$nightmode-text-light2;
+                            &:after{
+                                background-color:$nightmode-post-border;
+                            }
+                        }
+                        .chat-list-toggle-element.active{
+                            color:$red;
+                            &:after{
+                                background-color:$red;
+                            }
+                            &:hover{
+                                &:after{
+                                    background-color:$red;
+                                }
+                            }
+                        }
+                    }
+                }
+                &-elements{
+                    .chat-list-element{
+
+                        &:hover{
+                            .chat-list-element-details{
+                                .chat-list-element-details-name{
+                                    span{
+                                        color:$red;
+                                    }
+                                }
+
+                            }   
+                        }
+                        .chat-list-element-details{
+                            .chat-list-element-details-name{
+                                span{
+                                    color:$white;
+                                }
+                            }
+                            .chat-list-element-details-last-message{
+                                span{
+                                    color:$nightmode-text-light2;
+                                }
+                            }
+                            .chat-list-element-settings{
+                                i{
+                                    color:$nightmode-text-light2!important;  
+                                }
+                            }
+                        }
+                    }
+                    .chat-list-element.active{
+                        background:transparent;
+                        .chat-list-element-details{
+                            .chat-list-element-details-name{
+                                span{
+                                    color:$red;
+                                }
+                            }
+                        }    
+                    }
+                }
+            }
+        }
+    }
+
+    .sidebar{
+        .sidebar-profile-page {
+            &-name {
+                color:$nightmode-sidebar-name;
+            }
+            &-alias{
+                color:$nightmode-sidebar-alias;
+            }
+        }
+        .settings-menu{
+            &-title{
+                border-bottom:1px solid $nightmode-post-border;
+                span{
+                    color:$nightmode-sidebar-name;   
+                }
+            }
+            &-list{
+                li{
+                    .settings-menu-list-item{
+                        span{
+                            color:$nightmode-text-light;
+                        }
+                    }
+                    .settings-menu-list-item.active{
+                        span{
+                            color:$red;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .middle-content{
+        .settings-tabs{
+            .settings-tab{
+                &-title{
+                    border-bottom:1px solid $nightmode-post-border;
+                    span{
+                        color:$nightmode-sidebar-name;
+                    }
+                }
+                .settings-tab-content{
+                    color:$nightmode-text;
+                    .form-control{
+                        label{
+                            color:$nightmode-sidebar-name;
+                        }
+                        span{
+                            color:$nightmode-text-light2; 
+                        }
+                        .suspend-account-button, .delete-account-button{
+                            span{
+                                color:$hashtag-text;
+                            }
+                        }
+                    }
+                    .form-control-input{
+                        input{
+                            background-color:$nightmode-chat-input;
+                            border:1px solid $nightmode-post-border;
+                            box-shadow: none;
+                            color:$nightmode-text-light3; 
+                        }
+                    }
+                    .form-control-birthday{
+                        select{
+                            background-color:$nightmode-chat-input;
+                            border:1px solid $nightmode-post-border;
+                            box-shadow: none;
+                            color:$nightmode-text-light3;
+                        }
+                    }
+                    .form-control-location{
+                        input{
+                            background-color:$nightmode-chat-input;
+                            border:1px solid $nightmode-post-border;
+                            box-shadow: none;
+                            color:$nightmode-text-light3; 
+                        }
+                    }
+                    .form-control-tfa{
+                        input{
+                            background-color:$nightmode-chat-input;
+                            border:1px solid $nightmode-post-border;
+                            box-shadow: none;
+                            color:$nightmode-text-light3;  
+                        }
+                        .tfa-divider{
+                            background: $nightmode-post-border;
+                        }
+                    }
+                }
+            }
+        }
+        .profile-about-content{
+            &-elements{
+                .profile-about-content-element-title{
+                    span{
+                        color:$nightmode-text2;
+                    }
+                }
+                .profile-about-content-element-text{
+                    p{
+                        color:$nightmode-text-light2;
+                        b{
+                            color:$nightmode-text;
+                        }
+                    }
+                }
+                .profile-about-content-element-divider{
+                    background:$nightmode-border;
+                }
+                .profile-about-content-element-caption-image{
+                    .profile-about-content-element-caption-image-left p{
+                        color:$nightmode-text-light2;
+                    }
+                }
+            }
+        }
+    }
+    .sidebar-right{
+        .sidebar-profile-information{
+            &-title{
+                span{
+                    color:$nightmode-text-light;
+                }
+            }
+            &-elements{
+                .sidebar-profile-information-element{
+                    &-index{
+                        span{
+                            color:$nightmode-text-light; 
+                        }
+                    }
+                    &-value{
+                        span{
+                            color:$white;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .profile-wrapper{
+        .profile-details{
+            .profile-details-name{
+                color:$nightmode-sidebar-name;     
+            }
+            .profile-details-alias{
+                color:$nightmode-text-light2;
+            }
+        }
+        .profile-user-stats{
+            .profile-user-stats-element{
+                .profile-user-stats-element-title{
+                    color:$nightmode-text-light;
+                }
+            }
+        }
+    }
+    .chat-wrapper .chat-left .chat-content .chat-messages-wrapper, .chat-content .chat-messages-wrapper, .floating-chat-box-content,
+    .chat-wrapper .chat-right .chat-list .chat-list-elements{
+        &::-webkit-scrollbar-track {;
+                                    background-color:$nightmode-chat-message-border;
+        }
+
+    }
+    .chat-wrapper .chat-right .chat-list .chat-list-elements .chat-list-element:before, .chat-wrapper .chat-right .chat-list .chat-list-elements .chat-list-element:after{
+        background:$nightmode-post-border;  
+    }
+    .settings-tabs .settings-tab .form-control .switch-wrapper .switch .slider.round{
+        background-color:$nightmode-chat-input;
+        border:1px solid $nightmode-post-border;
+        box-shadow: none;  
+    }
+    .settings-tabs .settings-tab .form-control .switch-wrapper .switch input:checked + .slider{
+        background:$nightmode-header-icon;
+    }
+    .profile-tabs-toggle{
+        border-bottom:1px solid $nightmode-post-border;
+            .profile-tabs-toggle-element{
+                &:after{
+                    background:transparent; 
+                }
+                span{
+                   color:$nightmode-text-light2; 
+                }
+            }
+           .profile-tabs-toggle-element.active{
+               &:after{
+                   background:$red;
+               }
+                span{
+                  color:$red;  
+                }
+            }
+        }
+}

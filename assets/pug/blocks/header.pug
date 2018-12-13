@@ -1,0 +1,87 @@
+header#header
+    .header
+        a.logo(href='#')
+            img.logo-default(src='assets/img/logo.png', alt='bmy.guide')
+            img.logo-nightmode(src='assets/img/logo-nightmode.png', alt='bmy.guide')
+        .search
+            input(type='text', placeholder='Search')
+            i.input-icon.icon-timeline-search
+        .header-right
+            .header-notifications
+                .header-notifications-toggle.active
+                    i.icon-timeline-notifications
+                .dropdown.dropdown-header-notifications
+                    .header-notifications-content.clearfix
+                        .header-notification.clearfix
+                            .notification-image(style="background-image: url('assets/img/profile.png')")
+                            .notification-content
+                                a(href='#') John Smith
+                                |  commented on
+                                a(href='#') Ana Maria Ionescu
+                                | 's post.
+                            .notification-time
+                                span 12m
+                        .header-notification.clearfix
+                            .notification-image(style="background-image: url('assets/img/profile.png')")
+                            .notification-content
+                                a(href='#') John Smith
+                                |  posted a new image.
+                            .notification-time
+                                span 1h
+                    .header-notifications-footer
+                        a.btn.btn-block.btn-ghost(href='#')
+                            span See all notifications
+            .header-messages
+                .header-messages-toggle.active
+                    i.icon-timeline-chat
+                .dropdown.dropdown-header-messages
+                    .header-messages-content.clearfix
+                        .header-message.clearfix
+                            .message-image(style="background-image: url('assets/img/profile.png')")
+                            .message-content
+                                .message-sender
+                                    span John Smith
+                                .message-details
+                                    | Lorem ipsum dolor sit amet...
+                            .message-time
+                                span 12m
+                        .header-message.clearfix
+                            .message-image(style="background-image: url('assets/img/profile.png')")
+                            .message-content
+                                .message-sender
+                                    span John Smith
+                                .message-details
+                                    | Lorem ipsum dolor sit amet...
+                            .message-time
+                                span 1h
+                    .header-messages-footer.clearfix
+                        a.btn.btn-ghost.float-left(href='#')
+                            span See all messages
+                        a.btn.btn-simple.btn-link.float-right(href='#')
+                            span Mark all as read
+            .header-profile
+                .header-profile-toggle
+                    .header-profile-toggle-picture(style="background-image: url('assets/img/profile.png')")
+                    .header-profile-toggle-arrow
+                        i.fas.fa-chevron-down
+                .dropdown.dropdown-header-profile
+                    ul
+                        li
+                            a.dropdown-action(href='#')
+                                span Notifications
+                        li
+                            a.dropdown-action(href='#')
+                                span Privacy
+                        li
+                            a.dropdown-action(href='#')
+                                span Settings
+                        li
+                            a.dropdown-action(href='#')
+                                span Log Out
+            //
+              <div class="header-login">
+              <a href="#" class="btn btn-simple">Login</a>
+              </div>
+              <div class="header-sign-up">
+              <a href="#" class="btn">Sign Up</a>
+              </div>
